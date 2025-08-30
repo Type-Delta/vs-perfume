@@ -25,8 +25,6 @@
 //    Keyword (non control): #6176d1be (bold)
 //    Keyword (control flow): #ecd926d7 (bold italic)
 //    Operators: logical/comparison/arithmetic/bitwise #79b7b5, assignment #14c759c7 (bold italic)
-//  NOTE: semanticTokenColors synchronized to tokenColors for overlapping categories.
-//  All styling requirements in concept.md addressed below.
 {
 	"$schema": "vscode://schemas/color-theme",
 	"name": "Perfume Dark",
@@ -137,7 +135,7 @@
 		"list.highlightForeground": "#df1b6c",
 		"list.inactiveSelectionBackground": "#2f2d3a",
 		"list.inactiveSelectionForeground": "#f5eaec",
-		"list.errorForeground": "#ff4d96",
+		"list.errorForeground": "#e9386d",
 		"list.warningForeground": "#ffcf6b",
 		"button.background": "#df1b6c",
 		"button.foreground": "#f5eaec",
@@ -228,7 +226,7 @@
 		"keyword.control": { "foreground": "#ecd926d7", "bold": true, "italic": true },
 		"operator": { "foreground": "#79b7b5" },
 		"operator.assignment": { "foreground": "#14c759c7", "bold": true, "italic": true },
-		"number": { "foreground": "#b82696" },
+		"number": { "foreground": "#b82696", "bold": true },
 		"string": { "foreground": "#84cd4c" },
 		"comment": { "foreground": "#6c5f6f", "italic": true },
 		"boolean": { "foreground": "#f06ba2" },
@@ -358,7 +356,7 @@
 		{
 			"name": "RegExp",
 			"scope": ["string.regexp", "constant.character.escape"],
-			"settings": { "foreground": "#b884e7" }
+			"settings": { "foreground": "#af2850" }
 		},
 		// Punctuation (neutral)
 		{
@@ -370,7 +368,7 @@
 		{
 			"name": "Invalid",
 			"scope": ["invalid", "invalid.deprecated"],
-			"settings": { "foreground": "#000000" }
+			"settings": { "foreground": "#e9386d", "fontStyle": "strikethrough" }
 		},
 
 		// * Language Specific

@@ -282,18 +282,13 @@
 	color: var(--perfume-accent) !important;
 }
 
-
-.file-icon-themable-tree {
-	--glass-bgc: var(--perfume-bg-elev);
-	background: var(--glass-bg) !important;
-	backdrop-filter: var(--glass-filter);
-}
-.file-icon-themable-tree, .monaco-scrollable-element,
-.file-icon-themable-tree .monaco-list-rows {
+.monaco-breadcrumbs-picker > div {
 	background: transparent !important;
 }
-.monaco-list-row.focused {
-	background: var(--twotone-90d-bg) !important;
+
+.monaco-scrollable-element,
+.file-icon-themable-tree .monaco-list-rows {
+	background: transparent !important;
 }
 
 /* Compact subtle separators */
