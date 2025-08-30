@@ -1,0 +1,64 @@
+/* Perfume Dark VS Code CSS Overrides
+	Goal: Glassmorphism, subtle accents, consistent accent color usage.
+	NOTE: All rules use !important as required (theme stylesheet loads before core).
+	NOTE: .css files are now generated from .scss sources do not modify them directly.
+*/
+
+// Panel transitions (still experimental)
+$enablePanelTransitions: false;
+$glassBlurAmount: 4px;
+$glassSaturateAmount: 190%;
+$glassBrightnessAmount: 70%;
+
+:root {
+	--perfume-accent: #df1b6c;
+	--perfume-accent-glow: 223 27 108;
+	--perfume-accent-weak: #df1b6c33;
+	--perfume-accent-alt: #2bb4af;
+	--perfume-accent-alt-tr: #2bb4af62;
+	--perfume-bg: #23212d;
+	--perfume-bg-elev: #2a2834;
+	--perfume-bg-overlay: #2f2d3a;
+	--perfume-border: #3a3744;
+	--perfume-border-strong: #4a4755;
+	--perfume-shadow-color: #23212dc9;
+	--perfume-fg: #f5eaec;
+	--perfume-radius-sm: 4px;
+	--perfume-radius-md: 6px;
+	--perfume-blur-sm: 3px;
+	--perfume-blur-md: 12px;
+	--perfume-transition: 120ms cubic-bezier(.4, 0, .2, 1);
+}
+
+
+@function glassBackground($bg-color1: var(--glass-bgc1), $bg-color2: var(--glass-bgc2)) {
+	@return linear-gradient(
+		145deg,
+		color-mix(in srgb, $bg-color1, transparent 46%) 0%,
+		color-mix(in srgb, $bg-color2, transparent 67%) 100%
+	);
+}
+
+@function glassEffect(
+	$blur: $glassBlurAmount,
+	$saturate: $glassSaturateAmount,
+	$brightness: $glassBrightnessAmount
+) {
+	@return blur($blur) saturate($saturate) brightness($brightness);
+}
+
+@function twotoneBackground($angle: 90deg, $position1: 40%, $position2: 100%) {
+	@return linear-gradient(
+		$angle,
+		var(--perfume-accent-weak) $position1,
+		var(--perfume-accent-alt-tr) $position2
+	);
+}
+
+@function twotoneStrongBackground($angle: 90deg, $position1: 40%, $position2: 100%) {
+	@return linear-gradient(
+		$angle,
+		var(--perfume-accent) $position1,
+		var(--perfume-accent-alt) $position2
+	);
+}

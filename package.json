@@ -2,7 +2,7 @@
   "name": "perfume",
   "displayName": "Perfume",
   "description": "VS Code theme focused on frosted glassmorphism with a touch of gradients.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Type-Delta",
   "publisher": "type-delta",
   "license": "MIT",
@@ -26,10 +26,12 @@
     ]
   },
   "scripts": {
-    "build": "npx vsce package --pre-release --no-dependencies -o ./dist/perfume-alpha1.vsix",
-    "install": "npm run build && code --install-extension ./dist/perfume-alpha1.vsix"
+    "compile-sass": "npx sass ./src/sass/index.scss:./src/vs-overwrite.css --no-source-map",
+    "build": "npm run compile-sass && npx vsce package --pre-release --no-dependencies -o ./dist/perfume-alpha2.vsix",
+    "install": "npm run build && code --install-extension ./dist/perfume-alpha2.vsix"
   },
   "devDependencies": {
-    "@vscode/vsce": "^3.6.0"
+    "@vscode/vsce": "^3.6.0",
+    "sass": "^1.91.0"
   }
 }

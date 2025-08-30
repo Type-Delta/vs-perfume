@@ -1,0 +1,18 @@
+@use "./root.scss" as *;
+
+@mixin glass(
+   $useShadows: false,
+   $bg-color1: var(--perfume-bg-overlay),
+   $bg-color2: var(--perfume-bg-elev)
+) {
+   background: glassBackground($bg-color1, $bg-color2) !important;
+   backdrop-filter: glassEffect();
+   @if $useShadows {
+      box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+   }
+}
+
+@mixin glassBorder($border-color: var(--perfume-border-strong)) {
+   border-radius: var(--perfume-radius-sm) !important;
+   border: 1px solid $border-color !important;
+}

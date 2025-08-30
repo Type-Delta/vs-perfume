@@ -1,406 +1,383 @@
 /* Perfume Dark VS Code CSS Overrides
-	 Goal: Glassmorphism, subtle accents, consistent accent color usage.
-	 NOTE: All rules use !important as required (theme stylesheet loads before core). */
-
+	Goal: Glassmorphism, subtle accents, consistent accent color usage.
+	NOTE: All rules use !important as required (theme stylesheet loads before core).
+	NOTE: .css files are now generated from .scss sources do not modify them directly.
+*/
 :root {
-	--perfume-accent: #df1b6c;
-	--perfume-accent-glow: 223 27 108;
-	--perfume-accent-alt: #2bb4af;
-	--perfume-accent-alt-tr: #2bb4af62;
-	--perfume-bg: #23212d;
-	--perfume-bg-elev: #2a2834;
-	--perfume-bg-overlay: #2f2d3a;
-	--perfume-border: #3a3744;
-	--perfume-border-strong: #4a4755;
-	--perfume-fg: #f5eaec;
-	--perfume-radius-sm: 4px;
-	--perfume-radius-md: 6px;
-	--perfume-blur-sm: 5px;
-	--perfume-blur-md: 12px;
-	--perfume-transition: 120ms cubic-bezier(.4, 0, .2, 1);
-
-	--glass-bgc: var(--perfume-bg-elev);
-	--glass-bg: linear-gradient(145deg,
-		color-mix(in srgb, var(--glass-bgc), transparent 46%) 0%,
-		color-mix(in srgb, var(--glass-bgc), transparent 67%) 100%);
-	--glass-filter: blur(var(--perfume-blur-sm)) saturate(170%);
-
-	--twotone-90d-bg: linear-gradient(90deg, #df1b6c33 40%, var(--perfume-accent-alt-tr));
+  --perfume-accent: #df1b6c;
+  --perfume-accent-glow: 223 27 108;
+  --perfume-accent-weak: #df1b6c33;
+  --perfume-accent-alt: #2bb4af;
+  --perfume-accent-alt-tr: #2bb4af62;
+  --perfume-bg: #23212d;
+  --perfume-bg-elev: #2a2834;
+  --perfume-bg-overlay: #2f2d3a;
+  --perfume-border: #3a3744;
+  --perfume-border-strong: #4a4755;
+  --perfume-shadow-color: #23212dc9;
+  --perfume-fg: #f5eaec;
+  --perfume-radius-sm: 4px;
+  --perfume-radius-md: 6px;
+  --perfume-blur-sm: 3px;
+  --perfume-blur-md: 12px;
+  --perfume-transition: 120ms cubic-bezier(.4, 0, .2, 1);
 }
 
 /* # Smooth transitions for layout changes */
-/* .monaco-grid-view>div>div>div.monaco-scrollable-element>div.split-view-container>div:nth-child(3)>div>div>div.monaco-scrollable-element>div.split-view-container>div:nth-child(3)>div>div>div.monaco-scrollable-element>div.split-view-container>div:nth-child(2) {
-	transition: top var(--perfume-transition), bottom var(--perfume-transition);
-}
-
-.monaco-grid-branch-node>*>*>.split-view-container>.split-view-view {
-	transition: left var(--perfume-transition), width var(--perfume-transition) !important;
-} */
-
 /* Tooltips */
 .context-view.monaco-component {
-	background: linear-gradient(90deg, #2a2834aa, #2f2d3a55) !important;
-	border-bottom: 1px solid var(--perfume-border) !important;
-	backdrop-filter: blur(var(--perfume-blur-sm)) !important;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
+  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
 }
 
 /* Title bar */
 .part.titlebar {
-	background: color-mix(in srgb, var(--perfume-bg), transparent 60%) !important;
+  background: color-mix(in srgb, var(--perfume-bg), transparent 60%) !important;
 }
 
 /* Activity bar refinement */
 .monaco-workbench .activitybar {
-	background: linear-gradient(160deg, #2a2834 0%, #23212d 80%) !important;
-	border-right: 1px solid var(--perfume-border) !important;
+  background: linear-gradient(160deg, var(--perfume-bg-elev) 0%, var(--perfume-bg) 80%) !important;
+  border-right: 1px solid var(--perfume-border) !important;
 }
 
 /* Tabs glass & accent indicator */
-.monaco-workbench .tabs-container>.tab.sizing-fit {
-	backdrop-filter: blur(var(--perfume-blur-sm)) !important;
-	overflow: hidden !important;
-	margin-right: 2px !important;
+.monaco-workbench .tabs-container > .tab.sizing-fit {
+  backdrop-filter: blur(var(--perfume-blur-sm)) !important;
+  overflow: hidden !important;
+  margin-right: 2px !important;
 }
 
-.monaco-workbench .tabs-container>.tab.active {
-	--tab-border-top-color: unset !important;
-
-	background: linear-gradient(180deg, #2f2d3a 0%, #26232f 100%) !important;
-	box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .4), inset 0 0 0 1px var(--perfume-border) !important;
+.monaco-workbench .tabs-container > .tab.active {
+  --tab-border-top-color: unset !important;
+  background: linear-gradient(180deg, #2f2d3a 0%, #26232f 100%) !important;
+  box-shadow: 0 2px 6px -2px var(--perfume-shadow-color), inset 0 0 0 1px var(--perfume-border) !important;
 }
 
-.monaco-workbench .tabs-container>.tab.active:before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	pointer-events: none;
-	background: radial-gradient(circle at 50% 10%, rgba(var(--perfume-accent-glow), 0.4), transparent 70%);
+.monaco-workbench .tabs-container > .tab.active:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 10%, rgba(var(--perfume-accent-glow), 0.4), transparent 70%);
 }
 
-.monaco-workbench .tabs-container>.tab.active:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 2px;
-	background: linear-gradient(90deg, var(--perfume-accent), var(--perfume-accent-alt));
+.monaco-workbench .tabs-container > .tab.active:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--perfume-accent) 0%, var(--perfume-accent-alt) 70%);
 }
 
 /* Sidebar section headers */
 .monaco-workbench .composite.title {
-	background: linear-gradient(90deg, #2a2834aa, #2f2d3a55) !important;
-	border-bottom: 1px solid var(--perfume-border) !important;
-	backdrop-filter: blur(var(--perfume-blur-sm)) !important;
+  background: linear-gradient(90deg, rgba(42, 40, 52, 0.6666666667), rgba(47, 45, 58, 0.3333333333)) !important;
+  border-bottom: 1px solid var(--perfume-border) !important;
+  backdrop-filter: blur(var(--perfume-blur-sm)) !important;
 }
 
 /* Command palette */
 .quick-input-widget {
-	background: linear-gradient(145deg, #2a2834ee, #23212dee) !important;
-	backdrop-filter: blur(var(--perfume-blur-md)) saturate(1.4) !important;
-	border: 1px solid var(--perfume-border-strong) !important;
-	box-shadow: 0 8px 32px -12px rgba(0, 0, 0, .6), 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
+  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  border-radius: var(--perfume-radius-sm) !important;
+  border: 1px solid var(--perfume-border-strong) !important;
+  box-shadow: 0 8px 32px -12px var(--perfume-shadow-color), 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
 }
 
 .quick-input-widget .monaco-list-row.focused {
-	background: var(--twotone-90d-bg) !important;
-	box-shadow: inset 0 0 0 1px var(--perfume-accent) !important;
+  background: linear-gradient(90deg, var(--perfume-accent-weak) 40%, var(--perfume-accent-alt-tr) 100%) !important;
+  box-shadow: inset 0 0 0 1px var(--perfume-accent) !important;
 }
 
 /* Hover & suggest widgets */
 .monaco-editor .monaco-hover,
 .editor-widget.suggest-widget,
 .token-inspect-widget {
-	background: var(--glass-bg) !important;
-	backdrop-filter: var(--glass-filter);
-	box-shadow: 0 6px 24px -10px rgba(0, 0, 0, .55) !important;
-	border-radius: var(--perfume-radius-sm) !important;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
+  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+  border-radius: var(--perfume-radius-sm) !important;
+  border: 1px solid var(--perfume-border-strong) !important;
 }
 
 .monaco-resizable-hover {
-	border-radius: var(--perfume-radius-sm) !important;
+  border-radius: var(--perfume-radius-sm) !important;
 }
 
 .editor-widget.suggest-widget .monaco-list-row.focused {
-	background: var(--twotone-90d-bg) !important;
+  background: linear-gradient(90deg, var(--perfume-accent-weak) 40%, var(--perfume-accent-alt-tr) 100%) !important;
 }
 
 .context-view.monaco-component .monaco-scrollable-element {
-	background: var(--glass-bg) !important;
-	backdrop-filter: var(--glass-filter);
-	box-shadow: 0 6px 24px -10px rgba(0, 0, 0, .55) !important;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
+  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
 }
 
 /* Menubar Items */
 .menubar-menu-items-holder {
-	background: var(--glass-bg) !important;
-	backdrop-filter: var(--glass-filter);
-
-	border: 1px solid var(--perfume-border-strong) !important;
-	box-shadow: 0 6px 24px -10px rgba(0, 0, 0, .55) !important;
-	border-radius: var(--perfume-radius-sm) !important;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
+  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+  border-radius: var(--perfume-radius-sm) !important;
+  border: 1px solid var(--perfume-border-strong) !important;
 }
+
 .menubar-menu-items-holder .monaco-submenu > * {
-	background: var(--glass-bg) !important;
-	backdrop-filter: var(--glass-filter);
-
-	border: 1px solid var(--perfume-border-strong) !important;
-	box-shadow: 0 6px 24px -10px rgba(0, 0, 0, .55) !important;
-	border-radius: var(--perfume-radius-sm) !important;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
+  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+  border-radius: var(--perfume-radius-sm) !important;
+  border: 1px solid var(--perfume-border-strong) !important;
 }
 
-.menubar-menu-items-holder>* {
-	background: transparent !important;
+.menubar-menu-items-holder > * {
+  background: transparent !important;
 }
 
 /* Command Palette panel (.quick-input-widget) */
 .quick-input-widget {
-	--glass-bgc: var(--perfume-bg-elev);
-	background: var(--glass-bg) !important;
-	backdrop-filter: var(--glass-filter);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
+  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+  border-radius: var(--perfume-radius-sm) !important;
+  border: 1px solid var(--perfume-border-strong) !important;
 }
 
 .quick-input-widget .monaco-list-rows {
-	background: transparent !important;
+  background: transparent !important;
 }
 
 /* Scrollbars subtle */
 ::-webkit-scrollbar {
-	width: 10px !important;
-	height: 10px !important;
+  width: 10px !important;
+  height: 10px !important;
 }
 
 ::-webkit-scrollbar-track {
-	background: transparent !important;
+  background: transparent !important;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: linear-gradient(180deg, #3a3744, #4a4755) !important;
-	border-radius: 20px !important;
-	border: 2px solid #23212d !important;
+  background: linear-gradient(180deg, #3a3744, #4a4755) !important;
+  border-radius: 20px !important;
+  border: 2px solid #23212d !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(180deg, #4a4755, #5a5666) !important;
+  background: linear-gradient(180deg, #4a4755, #5a5666) !important;
 }
 
 /* Status bar glass */
 .monaco-workbench .part.statusbar {
-	background: linear-gradient(90deg, #2a2834cc 60%, var(--perfume-accent-alt-tr)) !important;
-	box-shadow: 0 -1px 0 0 var(--perfume-border) inset, 0 -4px 12px -6px rgba(0, 0, 0, .6) !important;
+  background: linear-gradient(90deg, rgba(42, 40, 52, 0.8) 60%, var(--perfume-accent-alt-tr)) !important;
+  box-shadow: 0 -1px 0 0 var(--perfume-border) inset, 0 -4px 12px -6px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Buttons refinement */
 .monaco-workbench .monaco-button,
 .monaco-text-button {
-	border-radius: var(--perfume-radius-sm) !important;
-	letter-spacing: .5px !important;
-	font-weight: 600 !important;
-	position: relative !important;
-	overflow: hidden !important;
+  border-radius: var(--perfume-radius-sm) !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 600 !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 
 .monaco-workbench .monaco-button.primary,
 .monaco-text-button.primary {
-	background: linear-gradient(140deg, #df1b6c, #ff4d96) !important;
-	box-shadow: 0 4px 18px -8px rgba(var(--perfume-accent-glow), 0.6) !important;
+  background: linear-gradient(140deg, #df1b6c, #ff4d96) !important;
+  box-shadow: 0 4px 18px -8px rgba(var(--perfume-accent-glow), 0.6) !important;
 }
 
 .monaco-workbench .monaco-button.primary:hover {
-	filter: brightness(1.08) saturate(1.15) !important;
+  filter: brightness(1.08) saturate(1.15) !important;
 }
 
 .monaco-button-dropdown .monaco-button:not(:first-child),
 .monaco-text-button-dropdown .monaco-button:not(:first-child) {
-	border-top-left-radius: 0 !important;
-	border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 
 .monaco-button-dropdown .monaco-button:not(:last-child),
 .monaco-text-button-dropdown .monaco-button:not(:last-child) {
-	border-top-right-radius: 0 !important;
-	border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
-
 
 /* Input fields */
 .monaco-inputbox {
-	background: #2a2834aa !important;
-	border: 1px solid var(--perfume-border) !important;
-	border-radius: var(--perfume-radius-sm) !important;
-	backdrop-filter: blur(var(--perfume-blur-sm)) !important;
-	transition: var(--perfume-transition) !important;
+  background: rgba(42, 40, 52, 0.6666666667) !important;
+  border: 1px solid var(--perfume-border) !important;
+  border-radius: var(--perfume-radius-sm) !important;
+  backdrop-filter: blur(var(--perfume-blur-sm)) !important;
+  transition: var(--perfume-transition) !important;
 }
 
 /* Inline code / token subtle rounding in markdown preview */
 .markdown-body code {
-	background: #2f2d3a;
-	padding: 2px 6px;
-	border-radius: var(--perfume-radius-sm);
-	border: 1px solid #3a3744;
-	color: var(--perfume-accent-alt);
+  background: #2f2d3a;
+  padding: 2px 6px;
+  border-radius: var(--perfume-radius-sm);
+  border: 1px solid #3a3744;
+  color: var(--perfume-accent-alt);
 }
 
 /* Panel headers */
 .monaco-workbench .panel .title {
-	background: linear-gradient(90deg, #2f2d3a80, #23212d44) !important;
-	backdrop-filter: blur(var(--perfume-blur-sm)) !important;
-	border-bottom: 1px solid var(--perfume-border) !important;
+  background: linear-gradient(90deg, rgba(47, 45, 58, 0.5019607843), rgba(35, 33, 45, 0.2666666667)) !important;
+  backdrop-filter: blur(var(--perfume-blur-sm)) !important;
+  border-bottom: 1px solid var(--perfume-border) !important;
 }
 
 /* Git decorations subtle underline instead of strong color backgrounds */
 .monaco-editor .dirty-diff-added {
-	background: linear-gradient(90deg, #2bb4af55, #2bb4af11) !important;
+  background: linear-gradient(90deg, rgba(43, 180, 175, 0.3333333333), rgba(43, 180, 175, 0.0666666667)) !important;
 }
 
 .monaco-editor .dirty-diff-modified {
-	background: linear-gradient(90deg, #ffcf6b55, #ffcf6b11) !important;
-	border-left-style: solid !important;
+  background: linear-gradient(90deg, rgba(255, 207, 107, 0.3333333333), rgba(255, 207, 107, 0.0666666667)) !important;
+  border-left-style: solid !important;
 }
 
 .monaco-editor .dirty-diff-deleted {
-	background: linear-gradient(90deg, #ff4d9655, #ff4d9611) !important;
+  background: linear-gradient(90deg, rgba(255, 77, 150, 0.3333333333), rgba(255, 77, 150, 0.0666666667)) !important;
 }
 
 /* Terminal styling */
 .xterm .xterm-viewport {
-	background: #23212d !important;
+  background: #23212d !important;
 }
 
 .xterm .xterm-screen canvas {
-	filter: saturate(1.05) contrast(1.02) !important;
+  filter: saturate(1.05) contrast(1.02) !important;
 }
 
 /* Subtle glow on active editor */
-.monaco-workbench .editor-group-container.active {
-	box-shadow: 0 0 0 1px var(--perfume-accent) inset, 0 0 22px -10px rgba(var(--perfume-accent-glow), 0.6) !important;
-	border-radius: var(--perfume-radius-sm) !important;
-}
-
 /* Breadcrumb emphasis */
 .monaco-breadcrumb-item:hover .label-name {
-	color: var(--perfume-accent) !important;
+  color: var(--perfume-accent) !important;
 }
 
 .monaco-breadcrumbs-picker > div {
-	background: transparent !important;
+  background: transparent !important;
 }
 
 .monaco-scrollable-element,
 .file-icon-themable-tree .monaco-list-rows {
-	background: transparent !important;
+  background: transparent !important;
 }
 
 /* Compact subtle separators */
 .monaco-workbench .sash {
-	background-color: #3a374422 !important;
+  background-color: rgba(58, 55, 68, 0.1333333333) !important;
 }
 
 .monaco-workbench .sash:hover {
-	background-color: var(--perfume-accent) !important;
+  background-color: var(--perfume-accent) !important;
 }
 
 /* Activity bar badge tweaks */
 .monaco-workbench .activitybar .badge .badge-content {
-	font-weight: 600 !important;
-	letter-spacing: .3px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
 }
 
 /* Explorer file hover */
 .monaco-list-row:hover:not(.selected) {
-	background: #2f2d3a99 !important;
+  background: rgba(47, 45, 58, 0.6) !important;
 }
 
 /* Selection flourish */
 ::selection {
-	background: #df1b6c66 !important;
-	color: #ffffff !important;
+  background: rgba(223, 27, 108, 0.4) !important;
+  color: #ffffff !important;
 }
 
 /* Find widget */
 .find-widget {
-	border: 1px solid var(--perfume-border) !important;
-	background: #2a2834dd !important;
-	backdrop-filter: blur(var(--perfume-blur-sm)) !important;
-	border-radius: 0 0 var(--perfume-radius-sm) var(--perfume-radius-sm) !important;
+  border: 1px solid var(--perfume-border) !important;
+  background: rgba(42, 40, 52, 0.8666666667) !important;
+  backdrop-filter: blur(var(--perfume-blur-sm)) !important;
+  border-radius: 0 0 var(--perfume-radius-sm) var(--perfume-radius-sm) !important;
 }
 
 /* Inline suggestions ghost text clarity */
 .monaco-editor .ghost-text-decoration {
-	color: #f5eaec44 !important;
-	font-style: italic !important;
+  color: rgba(245, 234, 236, 0.2666666667) !important;
+  font-style: italic !important;
 }
 
 /* Settings editor cards */
 .settings-editor .settings-toc-container,
 .settings-editor .settings-tree-container {
-	background: #2a2834aa !important;
-	backdrop-filter: blur(var(--perfume-blur-sm)) !important;
+  background: rgba(42, 40, 52, 0.6666666667) !important;
+  backdrop-filter: blur(var(--perfume-blur-sm)) !important;
 }
 
 .settings-editor .monaco-list-row.focused {
-	background: var(--twotone-90d-bg) !important;
+  background: linear-gradient(90deg, var(--perfume-accent-weak) 40%, var(--perfume-accent-alt-tr) 100%) !important;
 }
 
 /* Outline & symbol tree hover */
 .pane-body .monaco-list-row:hover:not(.selected) {
-	background: #2f2d3a !important;
+  background: #2f2d3a !important;
 }
 
 /* Decorative subtle gradient behind full workbench */
-body>.monaco-workbench {
-	background: radial-gradient(circle at 20% 20%, #2f2d3a 0%, #23212d 55%, #1f1d27 100%) !important;
+body > .monaco-workbench {
+  background: radial-gradient(circle at 20% 20%, #2f2d3a 0%, #23212d 55%, #1f1d27 100%) !important;
 }
 
 /* Code lens subtle color */
 .monaco-editor .codelens-decoration {
-	color: #f5eaec55 !important;
+  color: rgba(245, 234, 236, 0.3333333333) !important;
 }
 
 /* Problems panel row focus */
 .markers-panel .monaco-list-row.focused {
-	background: var(--twotone-90d-bg) !important;
+  background: linear-gradient(90deg, var(--perfume-accent-weak) 40%, var(--perfume-accent-alt-tr) 100%) !important;
 }
 
 /* Transparent drag image fixes */
 .drag-image {
-	background: #2a2834dd !important;
-	border: 1px solid var(--perfume-border) !important;
+  background: rgba(42, 40, 52, 0.8666666667) !important;
+  border: 1px solid var(--perfume-border) !important;
 }
 
-
-/* Explorer Icons */
-.show-file-icons .file-icon::before {
-	filter: saturate(160%)
+s .show-file-icons .file-icon::before {
+  filter: saturate(160%);
 }
 
 /* Gutter Number */
 .monaco-editor .line-numbers {
-	text-shadow: 0 0 0 #ffffff00;
-	transition: text-shadow 1s ease;
+  text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  transition: text-shadow 1s ease;
 }
+
 .monaco-editor .line-numbers.active-line-number {
-	--glow-color: color-mix(in srgb, var(--perfume-accent), transparent 50%);
-	text-shadow:
-		0 0 5px var(--glow-color),
-		0 0 10px var(--glow-color),
-		0 0 20px var(--glow-color),
-		0 0 40px var(--glow-color),
-		0 0 80px var(--glow-color);
+  --glow-color: color-mix(in srgb, var(--perfume-accent), transparent 50%);
+  text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 40px var(--glow-color), 0 0 80px var(--glow-color);
 }
 
 /* Notifications */
 .notifications-toasts .monaco-list-row,
 .notifications-toasts .monaco-list-rows,
 .notifications-toasts .monaco-list-container {
-	background: transparent !important;
-	border-radius: var(--perfume-radius-md) !important;
+  background: transparent !important;
+  border-radius: var(--perfume-radius-md) !important;
 }
 
 .notifications-toasts .monaco-list-row .notification-list-item {
-	border: 1px solid var(--perfume-border) !important;
+  border: 1px solid var(--perfume-border) !important;
 }
 
 .notifications-toasts .monaco-list-row:hover .notification-list-item {
-	border-color: var(--perfume-accent) !important;
+  border-color: var(--perfume-accent) !important;
 }
