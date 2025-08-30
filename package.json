@@ -1,0 +1,35 @@
+{
+  "name": "perfume",
+  "displayName": "Perfume",
+  "description": "VS Code theme focused on frosted glassmorphism with a touch of gradients.",
+  "version": "0.0.1",
+  "author": "Type-Delta",
+  "publisher": "type-delta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Type-Delta/vs-perfume"
+  },
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Perfume Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Perfume Dark-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "npx vsce package --pre-release --no-dependencies -o ./dist/perfume-alpha1.vsix",
+    "install": "npm run build && code --install-extension ./dist/perfume-alpha1.vsix"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.0"
+  }
+}
