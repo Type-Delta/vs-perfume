@@ -16,3 +16,12 @@
    border-radius: var(--perfume-radius-sm) !important;
    border: 1px solid $border-color !important;
 }
+
+@mixin gitBranchIndicator($color) {
+   background: radial-gradient(
+      circle at 54% 100%,
+      $color 0%,
+      color-mix(in srgb, $color, transparent 65%) 20%,
+      transparent 48%
+   ) !important;
+}

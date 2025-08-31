@@ -40,7 +40,7 @@
 .monaco-workbench .tabs-container>.tab.active {
 	--tab-border-top-color: unset !important;
 
-	background: linear-gradient(180deg, #2f2d3a 0%, #26232f 100%) !important;
+	background: linear-gradient(0deg, #2f2d3a 0%, #26232f 100%) !important;
 	box-shadow: 0 2px 6px -2px var(--perfume-shadow-color), inset 0 0 0 1px var(--perfume-border) !important;
 }
 
@@ -149,6 +149,31 @@
 .monaco-workbench .part.statusbar {
 	background: linear-gradient(90deg, #2a2834cc 60%, var(--perfume-accent-alt-tr)) !important;
 	box-shadow: 0 -1px 0 0 var(--perfume-border) inset, 0 -4px 12px -6px rgba(0, 0, 0, .6) !important;
+}
+
+.part.statusbar .statusbar-item:nth-child(2) {
+	background: transparent !important;
+}
+
+.part.statusbar .statusbar-item[aria-label*="master"],
+.part.statusbar .statusbar-item[aria-label*="main"] {
+  @include gitBranchIndicator(var(--perfume-accent));
+}
+
+.part.statusbar .statusbar-item[aria-label*="dev"] {
+  @include gitBranchIndicator(var(--perfume-accent-alt));
+}
+
+.part.statusbar .statusbar-item[aria-label*="feat"] {
+  @include gitBranchIndicator(#ff8c00);
+}
+
+.part.statusbar .statusbar-item[aria-label*="release"] {
+  @include gitBranchIndicator(#8713c5);
+}
+
+.part.statusbar .statusbar-item[aria-label*="fix"] {
+  @include gitBranchIndicator(#80db2b);
 }
 
 /* Buttons refinement */

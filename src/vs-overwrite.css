@@ -5,6 +5,7 @@
 */
 :root {
   --perfume-accent: #df1b6c;
+  --perfume-accent-tr: #df1b6c62;
   --perfume-accent-glow: 223 27 108;
   --perfume-accent-weak: #df1b6c33;
   --perfume-accent-alt: #2bb4af;
@@ -27,7 +28,7 @@
 /* Tooltips */
 .context-view.monaco-component {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
-  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  backdrop-filter: blur(4px) saturate(190%) brightness(70%);
   box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
 }
 
@@ -51,7 +52,7 @@
 
 .monaco-workbench .tabs-container > .tab.active {
   --tab-border-top-color: unset !important;
-  background: linear-gradient(180deg, #2f2d3a 0%, #26232f 100%) !important;
+  background: linear-gradient(0deg, #2f2d3a 0%, #26232f 100%) !important;
   box-shadow: 0 2px 6px -2px var(--perfume-shadow-color), inset 0 0 0 1px var(--perfume-border) !important;
 }
 
@@ -83,7 +84,7 @@
 /* Command palette */
 .quick-input-widget {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
-  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  backdrop-filter: blur(4px) saturate(190%) brightness(70%);
   border-radius: var(--perfume-radius-sm) !important;
   border: 1px solid var(--perfume-border-strong) !important;
   box-shadow: 0 8px 32px -12px var(--perfume-shadow-color), 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
@@ -99,7 +100,7 @@
 .editor-widget.suggest-widget,
 .token-inspect-widget {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
-  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  backdrop-filter: blur(4px) saturate(190%) brightness(70%);
   box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
   border-radius: var(--perfume-radius-sm) !important;
   border: 1px solid var(--perfume-border-strong) !important;
@@ -115,14 +116,14 @@
 
 .context-view.monaco-component .monaco-scrollable-element {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
-  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  backdrop-filter: blur(4px) saturate(190%) brightness(70%);
   box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
 }
 
 /* Menubar Items */
 .menubar-menu-items-holder {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
-  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  backdrop-filter: blur(4px) saturate(190%) brightness(70%);
   box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
   border-radius: var(--perfume-radius-sm) !important;
   border: 1px solid var(--perfume-border-strong) !important;
@@ -130,7 +131,7 @@
 
 .menubar-menu-items-holder .monaco-submenu > * {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
-  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  backdrop-filter: blur(4px) saturate(190%) brightness(70%);
   box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
   border-radius: var(--perfume-radius-sm) !important;
   border: 1px solid var(--perfume-border-strong) !important;
@@ -143,7 +144,7 @@
 /* Command Palette panel (.quick-input-widget) */
 .quick-input-widget {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
-  backdrop-filter: blur(3px) saturate(190%) brightness(70%);
+  backdrop-filter: blur(4px) saturate(190%) brightness(70%);
   box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
   border-radius: var(--perfume-radius-sm) !important;
   border: 1px solid var(--perfume-border-strong) !important;
@@ -177,6 +178,31 @@
 .monaco-workbench .part.statusbar {
   background: linear-gradient(90deg, rgba(42, 40, 52, 0.8) 60%, var(--perfume-accent-alt-tr)) !important;
   box-shadow: 0 -1px 0 0 var(--perfume-border) inset, 0 -4px 12px -6px rgba(0, 0, 0, 0.6) !important;
+}
+
+.part.statusbar .statusbar-item:nth-child(2) {
+  background: transparent !important;
+}
+
+.part.statusbar .statusbar-item[aria-label*=master],
+.part.statusbar .statusbar-item[aria-label*=main] {
+  background: radial-gradient(circle at 54% 100%, var(--perfume-accent) 0%, color-mix(in srgb, var(--perfume-accent), transparent 65%) 20%, transparent 48%) !important;
+}
+
+.part.statusbar .statusbar-item[aria-label*=dev] {
+  background: radial-gradient(circle at 54% 100%, var(--perfume-accent-alt) 0%, color-mix(in srgb, var(--perfume-accent-alt), transparent 65%) 20%, transparent 48%) !important;
+}
+
+.part.statusbar .statusbar-item[aria-label*=feat] {
+  background: radial-gradient(circle at 54% 100%, #ff8c00 0%, color-mix(in srgb, #ff8c00, transparent 65%) 20%, transparent 48%) !important;
+}
+
+.part.statusbar .statusbar-item[aria-label*=release] {
+  background: radial-gradient(circle at 54% 100%, #8713c5 0%, color-mix(in srgb, #8713c5, transparent 65%) 20%, transparent 48%) !important;
+}
+
+.part.statusbar .statusbar-item[aria-label*=fix] {
+  background: radial-gradient(circle at 54% 100%, #80db2b 0%, color-mix(in srgb, #80db2b, transparent 65%) 20%, transparent 48%) !important;
 }
 
 /* Buttons refinement */
