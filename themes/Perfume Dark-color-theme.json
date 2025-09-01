@@ -20,7 +20,7 @@
 //    Class: #e0a7ff (bold)
 //    Interface / Type / Enum: #cc67e3 (italic)
 //    Module / Namespace: #ffcf6b (underline)
-//    Annotation / Decorator: #6176D1BE (semantic overridden to match token variant)
+//    Annotation / Decorator: #6176d1be (semantic overridden to match token variant)
 //    Comment: #6c5f6f (italic)
 //    Keyword (non control): #6176d1be (bold)
 //    Keyword (control flow): #ecd926d7 (bold italic)
@@ -231,8 +231,8 @@
 		"comment": { "foreground": "#6c5f6f", "italic": true },
 		"boolean": { "foreground": "#f06ba2" },
 		"regexp": { "foreground": "#b884e7" },
-		"decorator": { "foreground": "#6176D1BE" },
-		"annotation": { "foreground": "#6176D1BE" },
+		"decorator": { "foreground": "#6176d1be" },
+		"annotation": { "foreground": "#6176d1be" },
 		"macro": { "foreground": "#ffcf6b" },
 		"label": { "foreground": "#df1b6c" },
 		"type": { "foreground": "#cc67e3", "italic": true },
@@ -249,7 +249,7 @@
 		{
 			"name": "This/Self",
 			"scope": ["variable.language", "variable.language.this"],
-			"settings": { "foreground": "#6176D1BE" }
+			"settings": { "foreground": "#6176d1be" }
 		},
 		// Strings
 		{
@@ -278,7 +278,7 @@
 		{
 			"name": "Keyword",
 			"scope": ["keyword", "storage.type", "storage.modifier"],
-			"settings": { "foreground": "#6176D1BE", "fontStyle": "bold" }
+			"settings": { "foreground": "#6176d1be", "fontStyle": "bold" }
 		},
 		// Control-flow Keywords
 		{
@@ -302,13 +302,13 @@
 		{
 			"name": "Operator Comparison, Arithmetic, Bitwise",
 			"scope": ["keyword.operator.comparison", "keyword.operator.relational"],
-			"settings": { "foreground": "#6176D1BE" }
+			"settings": { "foreground": "#6176d1be" }
 		},
 		// Operators - Type Annotation
 		{
 			"name": "Operator Type Annotation",
 			"scope": ["keyword.operator.type.annotation", "punctuation.separator.type.annotation"],
-			"settings": { "foreground": "#6176D1BE" }
+			"settings": { "foreground": "#6176d1be" }
 		},
 		// Functions
 		{
@@ -356,7 +356,7 @@
 				"meta.decorator",
 				"entity.name.function.decorator"
 			],
-			"settings": { "foreground": "#6176D1BE" }
+			"settings": { "foreground": "#6176d1be" }
 		},
 		// Regex
 		{

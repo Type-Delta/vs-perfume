@@ -25,10 +25,12 @@
       }
     ]
   },
+  "type": "module",
   "scripts": {
     "compile-sass": "npx sass ./src/sass/index.scss:./src/vs-overwrite.css --no-source-map",
     "build": "npm run compile-sass && mkdir -p ./dist && npx vsce package --pre-release --no-dependencies -o ./dist/perfume-alpha2.vsix",
-    "install": "npm run build && code --install-extension ./dist/perfume-alpha2.vsix"
+    "install": "npm run build && code --install-extension ./dist/perfume-alpha2.vsix",
+    "format": "node ./scripts/codeFormatter.js"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.6.0",
