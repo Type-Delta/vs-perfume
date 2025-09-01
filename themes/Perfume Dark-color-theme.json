@@ -20,7 +20,7 @@
 //    Class: #e0a7ff (bold)
 //    Interface / Type / Enum: #cc67e3 (italic)
 //    Module / Namespace: #ffcf6b (underline)
-//    Annotation / Decorator: #313553 (semantic overridden to match token variant)
+//    Annotation / Decorator: #6176D1BE (semantic overridden to match token variant)
 //    Comment: #6c5f6f (italic)
 //    Keyword (non control): #6176d1be (bold)
 //    Keyword (control flow): #ecd926d7 (bold italic)
@@ -231,8 +231,8 @@
 		"comment": { "foreground": "#6c5f6f", "italic": true },
 		"boolean": { "foreground": "#f06ba2" },
 		"regexp": { "foreground": "#b884e7" },
-		"decorator": { "foreground": "#313553" },
-		"annotation": { "foreground": "#313553" },
+		"decorator": { "foreground": "#6176D1BE" },
+		"annotation": { "foreground": "#6176D1BE" },
 		"macro": { "foreground": "#ffcf6b" },
 		"label": { "foreground": "#df1b6c" },
 		"type": { "foreground": "#cc67e3", "italic": true },
@@ -296,13 +296,13 @@
 		{
 			"name": "Operator Logical",
 			"scope": ["keyword.operator.logical"],
-			"settings": { "foreground": "#79b7b5" }
+			"settings": { "foreground": "#df1b6c" }
 		},
 		// Operators - Comparison, Arithmetic, Bitwise
 		{
 			"name": "Operator Comparison, Arithmetic, Bitwise",
 			"scope": ["keyword.operator.comparison", "keyword.operator.relational"],
-			"settings": { "foreground": "#79b7b5" }
+			"settings": { "foreground": "#6176D1BE" }
 		},
 		// Operators - Type Annotation
 		{
@@ -349,8 +349,14 @@
 		// Annotations & Decorators
 		{
 			"name": "Annotation / Decorator",
-			"scope": ["storage.type.annotation", "punctuation.definition.annotation", "meta.annotation", "meta.decorator", "entity.name.function.decorator"],
-			"settings": { "foreground": "#313553" }
+			"scope": [
+				"storage.type.annotation",
+				"punctuation.definition.annotation",
+				"meta.annotation",
+				"meta.decorator",
+				"entity.name.function.decorator"
+			],
+			"settings": { "foreground": "#6176D1BE" }
 		},
 		// Regex
 		{
@@ -414,7 +420,12 @@
 			"name": "Python - docstring",
 			"scope": ["string.quoted.docstring"],
 			"settings": { "foreground": "#6c5f6f" }
+		},
+		// HTML
+		{
+			"name": "HTML - XML tags",
+			"scope": ["entity.name.tag", "meta.tag.html"],
+			"settings": { "foreground": "#f06ba2" }
 		}
-
 	]
 }
