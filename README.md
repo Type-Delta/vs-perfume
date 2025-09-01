@@ -11,7 +11,6 @@ A theme inspired by the beauty of luxury *"Perfume"* bottles (especially the one
 >
 > ```bash
 > npm i
-> npm run install
 > ```
 >
 > This theme is meant to be used with CSS overrides. You can use it by installing the [Custom CSS and JS](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) extension and pointing it to the [`vs-overwrite.css`](/src/vs-overwrite.css) file.

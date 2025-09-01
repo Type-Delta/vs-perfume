@@ -27,7 +27,7 @@
   },
   "scripts": {
     "compile-sass": "npx sass ./src/sass/index.scss:./src/vs-overwrite.css --no-source-map",
-    "build": "npm run compile-sass && npx vsce package --pre-release --no-dependencies -o ./dist/perfume-alpha2.vsix",
+    "build": "npm run compile-sass && mkdir -p ./dist && npx vsce package --pre-release --no-dependencies -o ./dist/perfume-alpha2.vsix",
     "install": "npm run build && code --install-extension ./dist/perfume-alpha2.vsix"
   },
   "devDependencies": {
