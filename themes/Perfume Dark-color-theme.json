@@ -14,9 +14,9 @@
 //    String: #84cd4c (token) / #6be3d6 legacy alt
 //    Number: #b82696 (token) / #e8c36a legacy alt
 //    Boolean / Null: #f06ba2
-//    Function: #f2b07b
-//    Property: #58d0c4
-//    Variable: #9ad1ff
+//    Function: #f4a86a
+//    Property: #7fd4cc
+//    Variable: #e7d5d8
 //    Class: #e0a7ff (bold)
 //    Interface / Type / Enum: #cc67e3 (italic)
 //    Module / Namespace: #ffcf6b (underline)
@@ -109,6 +109,8 @@
 		"statusBar.debuggingForeground": "#f5eaec",
 		"statusBar.noFolderBackground": "#252526dd",
 		"statusBar.noFolderForeground": "#f5eaec",
+		"statusBarItem.remoteBackground": "#df1b6c",
+		"statusBarItem.remoteForeground": "#f5eaec",
 		// Title Bar
 		"titleBar.activeBackground": "#23212d",
 		"titleBar.activeForeground": "#f5eaec99",
@@ -163,7 +165,7 @@
 		"terminal.ansiYellow": "#e8c36a",
 		"terminal.ansiBlue": "#2bb4af",
 		"terminal.ansiMagenta": "#e0a7ff",
-		"terminal.ansiCyan": "#58d0c4",
+		"terminal.ansiCyan": "#7fd4cc",
 		"terminal.ansiWhite": "#f5eaec",
 		"terminal.ansiBrightBlack": "#5f5a66",
 		"terminal.ansiBrightRed": "#ff4d96",
@@ -183,7 +185,7 @@
 		"gitDecoration.modifiedResourceForeground": "#ffcf6b",
 		"gitDecoration.addedResourceForeground": "#14c759",
 		"gitDecoration.deletedResourceForeground": "#ff4d96",
-		"gitDecoration.untrackedResourceForeground": "#58d0c4",
+		"gitDecoration.untrackedResourceForeground": "#7fd4cc",
 		"gitDecoration.ignoredResourceForeground": "#7c707e",
 		"gitDecoration.conflictingResourceForeground": "#8713c5",
 		"gitDecoration.submoduleResourceForeground": "#9ad1ff",
@@ -197,24 +199,24 @@
 		"editorCodeLens.foreground": "#f5eaec99",
 		"textLink.activeForeground": "#df1b6c",
 		"textLink.foreground": "#df1b6c",
-		"symbolIcon.functionForeground": "#f2b07b",
-		"symbolIcon.methodForeground": "#f2b07b",
+		"symbolIcon.functionForeground": "#f4a86a",
+		"symbolIcon.methodForeground": "#f4a86a",
 		"symbolIcon.classForeground": "#e0a7ff",
 		"symbolIcon.interfaceForeground": "#9ad1ff",
 		// enumForeground not supported, rely on interface/enum styling above.
 		"symbolIcon.moduleForeground": "#ffcf6b",
-		"symbolIcon.propertyForeground": "#58d0c4",
+		"symbolIcon.propertyForeground": "#7fd4cc",
 		"symbolIcon.variableForeground": "#f5eaec",
 		"symbolIcon.keyForeground": "#df1b6c",
 		"symbolIcon.stringForeground": "#6be3d6",
 		"symbolIcon.numberForeground": "#e8c36a"
 	},
 	"semanticTokenColors": {
-		"variable": { "foreground": "#9ad1ff" },
+		"variable": { "foreground": "#e7d5d8" },
 		"parameter": { "foreground": "#9ad1ff" },
-		"property": { "foreground": "#58d0c4" },
-		"function": { "foreground": "#f2b07b" },
-		"method": { "foreground": "#f2b07b" },
+		"property": { "foreground": "#7fd4cc" },
+		"function": { "foreground": "#f4a86a" },
+		"method": { "foreground": "#f4a86a" },
 		"class": { "foreground": "#e0a7ff", "bold": true },
 		"interface": { "foreground": "#cc67e3", "italic": true },
 		"enum": { "foreground": "#cc67e3", "italic": true },
@@ -283,7 +285,7 @@
 		// Control-flow Keywords
 		{
 			"name": "Control Flow Keyword",
-			"scope": ["keyword.control.return", "keyword.control.flow", "keyword.control.loop"],
+			"scope": ["keyword.control.return", "keyword.control.flow"],
 			"settings": { "foreground": "#ecd926d7", "fontStyle": "bold italic" }
 		},
 		// Operators - Assignment
@@ -314,19 +316,19 @@
 		{
 			"name": "Function",
 			"scope": ["entity.name.function", "meta.function-call", "support.function", "meta.function-call.method"],
-			"settings": { "foreground": "#f2b07b" }
+			"settings": { "foreground": "#f4a86a" }
 		},
 		// Variables (generic)
 		{
 			"name": "Variable",
 			"scope": ["variable", "variable.other.readwrite", "variable.other.object"],
-			"settings": { "foreground": "#9ad1ff" }
+			"settings": { "foreground": "#e7d5d8" }
 		},
 		// Properties
 		{
 			"name": "Property",
 			"scope": ["variable.other.property", "meta.object-literal.key", "support.variable.property"],
-			"settings": { "foreground": "#58d0c4" }
+			"settings": { "foreground": "#7fd4cc" }
 		},
 		// Classes
 		{
