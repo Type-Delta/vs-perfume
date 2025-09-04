@@ -47,9 +47,9 @@
 		"editor.inactiveSelectionBackground": "#df1b6c22",
 		"editor.selectionHighlightBackground": "#2cada981",
 		"editor.findMatchBackground": "#25e0da96",
-		"editor.findMatchHighlightBackground": "#df1b6c33",
-		"editor.wordHighlightBackground": "#2dc3be42",
-		"editor.wordHighlightStrongBackground": "#df1b6c22",
+		"editor.findMatchHighlightBackground": "#df1b6d91",
+		"editor.wordHighlightBackground": "#2dc3be51",
+		"editor.wordHighlightStrongBackground": "#df1b6d61",
 		"editor.lineHighlightBackground": "#2f2c39",
 		"editor.lineHighlightBorder": "#2f2c39",
 		"editorBracketMatch.background": "#88b7b522",
@@ -187,7 +187,7 @@
 		"gitDecoration.deletedResourceForeground": "#ff4d96",
 		"gitDecoration.untrackedResourceForeground": "#7fd4cc",
 		"gitDecoration.ignoredResourceForeground": "#7c707e",
-		"gitDecoration.conflictingResourceForeground": "#8713c5",
+		"gitDecoration.conflictingResourceForeground": "#cc67e3",
 		"gitDecoration.submoduleResourceForeground": "#9ad1ff",
 		// Diff Editor
 		"diffEditor.insertedTextBackground": "#b38bff22",
@@ -213,7 +213,7 @@
 	},
 	"semanticTokenColors": {
 		// Simplified / Uniform semantic token palette
-		"variable": { "foreground": "#e7d5d8" },
+		"variable": { "foreground": "#d1bbbe" },
 		"parameter": { "foreground": "#9ad1ff" },
 		"property": { "foreground": "#f5eaecbb" },
 		"function": { "foreground": "#dd6798" },
@@ -320,13 +320,13 @@
 		{
 			"name": "Function",
 			"scope": ["entity.name.function", "meta.function-call", "support.function", "meta.function-call.method"],
-			"settings": { "foreground": "#f5eaec" }
+			"settings": { "foreground": "#ea80ac" }
 		},
 		// Variables (generic white)
 		{
 			"name": "Variable",
 			"scope": ["variable", "variable.other.readwrite", "variable.other.object"],
-			"settings": { "foreground": "#f5eaec" }
+			"settings": { "foreground": "#d1bbbe" }
 		},
 		// Properties (dim white)
 		{
@@ -338,7 +338,7 @@
 		{
 			"name": "Class",
 			"scope": ["entity.name.class", "entity.name.type.class"],
-			"settings": { "foreground": "#f5eaec", "fontStyle": "bold" }
+			"settings": { "foreground": "#ea80ac", "fontStyle": "bold" }
 		},
 		// Interfaces, Types, Enums (dark blue italic)
 		{
