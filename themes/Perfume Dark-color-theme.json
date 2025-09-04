@@ -1,30 +1,4 @@
 // Perfume Dark Theme
-// Concept: Modern, minimal, elegant luxury with glassmorphism & vibrant accents.
-// Palette core:
-//  Accent / Primary: #df1b6c
-//  Accent Alt (cool): #2bb4af
-//  Foreground (base text): #f3eced
-//  Background (base): #1f1e26 (workbench), legacy elevated: #23212d
-//  Additional derived tones:
-//    Background Elevated: #2a2834
-//    Background Overlay: #2f2d3a
-//    Border Subtle: #3a3744  Border Strong: #4a4755
-//    Selection Active: #df1b6c55  Selection Inactive: #df1b6c22
-//    Line Highlight: #2f2c39
-//    String: #84cd4c (token) / #6be3d6 legacy alt
-//    Number: #b82696 (token) / #e8c36a legacy alt
-//    Boolean / Null: #ff4d96
-//    Function / Method: #f7d1e1 (light sakura pink)
-//    Property: #f4c1d5 (soft light pink)
-//    Variable: #f5eaec (white)
-//    Class: #e0a7ff (bold)
-//    Interface / Type / Enum: #cc67e3 (italic purple)
-//    Module / Namespace: #b38bff (underline light purple)
-//    Annotation / Decorator: #a07ad6 (muted purple)
-//    Comment: #6c5f6f (italic gray)
-//    Keyword (non control): #4f5a90 (bold deep blue)
-//    Keyword (control flow): #df1b6c (bold italic primary pink)
-//    Operators: comparison/arithmetic/bitwise #4f5a90, logical #df1b6c, assignment #ff4d96 (bold italic)
 {
 	"$schema": "vscode://schemas/color-theme",
 	"name": "Perfume Dark",
@@ -32,39 +6,39 @@
 	"semanticHighlighting": true,
 	"colors": {
 		// General
-		"focusBorder": "#df1b6c88",
-		"foreground": "#f3eced",
-		"selection.background": "#df1b6c55",
-		"descriptionForeground": "#f5eaecaa",
+		"focusBorder": "#df1b6c87",
+		"foreground": "#f5eaec",
+		"selection.background": "#df1b6c54",
+		"descriptionForeground": "#f5eaecab",
 		"errorForeground": "#ff4d96",
 		// Editor
 		"editor.background": "#1f1e26",
-		"editor.foreground": "#e7d5d8",
+		"editor.foreground": "#d1bbbe",
 		"editorCursor.foreground": "#ff4d96",
-		"editor.selectionBackground": "#df1b6c44",
+		"editor.selectionBackground": "#df1b6c45",
 		"editorLineNumber.foreground": "#5f5a66",
 		"editorLineNumber.activeForeground": "#ba3b70",
-		"editor.inactiveSelectionBackground": "#df1b6c22",
-		"editor.selectionHighlightBackground": "#2cada981",
+		"editor.inactiveSelectionBackground": "#df1b6c21",
+		"editor.selectionHighlightBackground": "#2cada982",
 		"editor.findMatchBackground": "#25e0da96",
-		"editor.findMatchHighlightBackground": "#df1b6d91",
-		"editor.wordHighlightBackground": "#2dc3be51",
-		"editor.wordHighlightStrongBackground": "#df1b6d61",
+		"editor.findMatchHighlightBackground": "#df1b6c91",
+		"editor.wordHighlightBackground": "#2dc3be52",
+		"editor.wordHighlightStrongBackground": "#df1b6c61",
 		"editor.lineHighlightBackground": "#2f2c39",
 		"editor.lineHighlightBorder": "#2f2c39",
-		"editorBracketMatch.background": "#88b7b522",
+		"editorBracketMatch.background": "#88b7b521",
 		"editorBracketMatch.border": "#95ddda66",
 		"editorGutter.background": "#1f1e26",
 		"editorGutter.modifiedBackground": "#ffcf6b",
 		"editorGutter.deletedBackground": "#e82c55",
 		"editorGutter.addedBackground": "#14c759",
-		"editorIndentGuide.background1": "#3a374455",
+		"editorIndentGuide.background1": "#3a374454",
 		"editorIndentGuide.activeBackground1": "#d7c7ce4f",
-		"editorWhitespace.foreground": "#3a374455",
-		"editorRuler.foreground": "#3a374455",
-		"editorHoverWidget.background": "#2f2d3aee",
+		"editorWhitespace.foreground": "#3a374454",
+		"editorRuler.foreground": "#3a374454",
+		"editorHoverWidget.background": "#2f2d3aed",
 		"editorHoverWidget.border": "#4a4755",
-		"editorSuggestWidget.background": "#2a2834ee",
+		"editorSuggestWidget.background": "#2a2834ed",
 		"editorSuggestWidget.border": "#4a4755",
 		"editorSuggestWidget.foreground": "#f5eaec",
 		"editorSuggestWidget.highlightForeground": "#df1b6c",
@@ -86,13 +60,13 @@
 		// Activity Bar
 		"activityBar.background": "#23212d",
 		"activityBar.foreground": "#f5eaec",
-		"activityBar.inactiveForeground": "#f5eaec55",
+		"activityBar.inactiveForeground": "#f5eaec54",
 		"activityBarBadge.background": "#df1b6c",
 		"activityBarBadge.foreground": "#f5eaec",
 		// Side Bar
 		"sideBar.background": "#23212d",
-		"sideBar.foreground": "#f5eaecbb",
-		"sideBarSectionHeader.background": "#2a2834aa",
+		"sideBar.foreground": "#f5eaecba",
+		"sideBarSectionHeader.background": "#2a2834ab",
 		"sideBarSectionHeader.foreground": "#f5eaec",
 		"sideBar.border": "#3a3744",
 		// Panels
@@ -102,12 +76,12 @@
 		"panelTitle.inactiveForeground": "#f5eaec66",
 		"panelTitle.activeBorder": "#df1b6c",
 		// Status Bar
-		"statusBar.background": "#252526dd",
+		"statusBar.background": "#23212dde",
 		"statusBar.foreground": "#f5eaec",
 		"statusBar.border": "#3a3744",
 		"statusBar.debuggingBackground": "#df1b6c",
 		"statusBar.debuggingForeground": "#f5eaec",
-		"statusBar.noFolderBackground": "#252526dd",
+		"statusBar.noFolderBackground": "#23212dde",
 		"statusBar.noFolderForeground": "#f5eaec",
 		"statusBarItem.remoteBackground": "#df1b6c",
 		"statusBarItem.remoteForeground": "#f5eaec",
@@ -115,7 +89,7 @@
 		"titleBar.activeBackground": "#23212d",
 		"titleBar.activeForeground": "#f5eaec99",
 		"titleBar.inactiveBackground": "#23212d",
-		"titleBar.inactiveForeground": "#f5eaec44",
+		"titleBar.inactiveForeground": "#f5eaec45",
 		// Menus
 		"dropdown.background": "#2a2834",
 		"dropdown.foreground": "#f5eaec",
@@ -131,7 +105,7 @@
 		"checkbox.border": "#3a3744",
 		"list.activeSelectionBackground": "#df1b6c33",
 		"list.activeSelectionForeground": "#f5eaec",
-		"list.focusBackground": "#2bb4af22",
+		"list.focusBackground": "#2bb4af21",
 		"list.focusForeground": "#f5eaec",
 		"list.hoverBackground": "#2f2d3a",
 		"list.highlightForeground": "#df1b6c",
@@ -142,7 +116,7 @@
 		"button.background": "#df1b6c",
 		"button.foreground": "#f5eaec",
 		"button.hoverBackground": "#ff3c87",
-		"scrollbarSlider.background": "#4a475544",
+		"scrollbarSlider.background": "#4a475545",
 		"scrollbarSlider.hoverBackground": "#4a475566",
 		"scrollbarSlider.activeBackground": "#df1b6c66",
 		"progressBar.background": "#df1b6c",
@@ -180,7 +154,7 @@
 		"peekViewEditor.background": "#2a2834",
 		"peekViewResult.background": "#23212d",
 		"peekViewTitle.background": "#68213f",
-		"peekViewEditor.matchHighlightBackground": "#df1b6c22",
+		"peekViewEditor.matchHighlightBackground": "#df1b6c21",
 		// Git Explorer Decorations
 		"gitDecoration.modifiedResourceForeground": "#ffcf6b",
 		"gitDecoration.addedResourceForeground": "#14c759",
@@ -190,12 +164,12 @@
 		"gitDecoration.conflictingResourceForeground": "#cc67e3",
 		"gitDecoration.submoduleResourceForeground": "#9ad1ff",
 		// Diff Editor
-		"diffEditor.insertedTextBackground": "#b38bff22",
-		"diffEditor.removedTextBackground": "#ff4d9622",
+		"diffEditor.insertedTextBackground": "#b38bff21",
+		"diffEditor.removedTextBackground": "#ff4d9621",
 		"diffEditor.diagonalFill": "#3a3744",
-		"minimap.selectionHighlight": "#df1b6c88",
+		"minimap.selectionHighlight": "#df1b6c87",
 		"minimap.warningHighlight": "#ffcf6bcc",
-		"minimap.errorHighlight": "#ff4d9688",
+		"minimap.errorHighlight": "#ff4d9687",
 		"editorCodeLens.foreground": "#f5eaec99",
 		"textLink.activeForeground": "#df1b6c",
 		"textLink.foreground": "#df1b6c",
@@ -212,10 +186,9 @@
 		"symbolIcon.numberForeground": "#c73a78"
 	},
 	"semanticTokenColors": {
-		// Simplified / Uniform semantic token palette
 		"variable": { "foreground": "#d1bbbe" },
 		"parameter": { "foreground": "#9ad1ff" },
-		"property": { "foreground": "#f5eaecbb" },
+		"property": { "foreground": "#d1bbbecc" },
 		"function": { "foreground": "#dd6798" },
 		"method": { "foreground": "#dd6798" },
 		"class": { "foreground": "#e0a7ff", "bold": true },
@@ -242,9 +215,6 @@
 		"selfParameter": { "foreground": "#4f5a90" }
 	},
 	"tokenColors": [
-		// Simplified palette version (Uniform Variant)
-		// Allowed base hues: Pink (#df1b6c family), White (#f5eaec family), Dark Blue (#4f5a90/#6176d1 family)
-		// Special allowances: Green (#84cd4c) ONLY for strings; Gray (#6c5f6f) for comments.
 		// Comments
 		{
 			"name": "Comment",

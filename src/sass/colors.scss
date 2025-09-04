@@ -1,0 +1,106 @@
+
+// Core / Brand
+$primary-500: #df1b6c; // Primary / Accent
+$secondary-500: #2bb4af; // Cool accent alt
+
+// Text & Foreground
+$foreground-100: #f5eaec; // Foreground (base text)
+
+// Background Layers
+$bg-900: #1f1e26; // Workbench base
+$bg-800: #23212d; // Elevated legacy sections
+$bg-700: #2a2834; // Elevated panel
+$bg-650: #2f2d3a; // Overlay / active tab
+
+// Borders / Structure
+$border-subtle: #3a3744; // Subtle border
+$border-strong: #4a4755; // Strong border
+
+// --- Extended Palette (Derived / Semantic) ---
+// Selection & Overlay
+$selection-active: #df1b6c55;
+$selection-inactive: #df1b6c22;
+$selection-hover: #df1b6c33;
+
+// Highlights / Search / Word (cool teal family)
+$highlight-teal-400: #2cada9; // from #2cada981 selectionHighlightBackground
+$highlight-teal-500: #25e0da; // find match background #25e0da96
+$highlight-teal-450: #2dc3be; // word highlight strong #2dc3be51
+$highlight-teal-425: #2dc3be; // word highlight #2dc3be51 (same base as strong)
+
+// Line / Structural Accents
+$line-highlight: #2f2c39; // line highlight background
+$peek-view-title: #68213f; // peek view title bar
+
+// Syntax Core Tokens
+$string-500: #84cd4c; // String token
+$string-alt-400: #6be3d6; // Legacy alt string (cool cyan)
+$number-500: #b82696; // Number primary token
+$number-alt-400: #e8c36a; // Legacy alt number (warm yellow)
+$boolean-500: #ff4d96; // Boolean / Null (standard theme)
+$boolean-alt-500: #f06ba2; // Boolean alt (fractured variant)
+$function-400: #f7d1e1; // Function / Method (sakura pink original)
+$function-500: #f4a86a; // Function / Method (fractured orange variant)
+$variable-500: #d1bbbe; // Variable (semantic token variant)
+$variable-alt-500: #9ad1ff; // Parameter / accent variable
+$property-400: #f4c1d5; // Property soft pink
+$property-500: #7fd4cc; // Property teal (fractured)
+$class-500: #e0a7ff; // Class
+$interface-500: #cc67e3; // Interface / Type / Enum
+$module-500: #ffcf6b; // Module / Namespace (fractured) / enumMember alt
+$module-alt-500: #b38bff; // Module / Namespace (original variant)
+$decorator-400: #a07ad6; // Decorator muted purple (original)
+$decorator-500: #6176d1; // Decorator / keyword blue (fractured)
+$annotation-400: #3f496f; // Annotation muted (original uniform set)
+$annotation-500: #313553; // Annotation / Decorator alt (concept)
+$regexp-400: #c73a78; // RegExp deep pink (original uniform)
+$regexp-500: #b884e7; // RegExp alt (fractured semantic)
+$function-alt-500: #ea80ac; // Function/Class alt (uniform tokens)
+$function-mid-500: #dd6798; // Semantic function mid tone
+$comment-400: #6c5f6f; // Comment / docstring
+
+// Operators & Special Semantics
+$operator-base: #4f5a90; // Operator / keyword dark blue (uniform theme)
+$operator-cool: #79b7b5; // Fractured operator base
+$operator-assignment: #ff4d96; // Assignment operator (uniform)
+$operator-assignment-alt: #14c759; // Assignment operator (fractured #14c759c7 base)
+$keyword-control: #df1b6c; // Control flow keyword (uniform)
+$keyword-control-alt: #ecd926; // Control flow keyword (fractured #ecd926d7)
+$keyword-base: #4f5a90; // Non-control keyword (uniform)
+$keyword-base-alt: #6176d1; // Non-control keyword alt (fractured #6176d1be)
+
+// Status / Feedback & Git
+$success-500: #14c759; // Added / success
+$warning-500: #ffcf6b; // Modified / warning highlight
+$error-500: #ff4d96; // Error / deleted resource
+$error-alt-500: #e82c55; // Deleted gutter alt
+$info-500: #2bb4af; // Info / alt accent
+$attention-500: #e9386d; // List error foreground / invalid alt
+$neutral-muted: #5f5a66; // Line number / bright black
+$neutral-strong: #ba3b70; // Active line number accent
+$ignored-500: #7c707e; // Ignored resource
+
+// Extended Bright / Terminal Colors
+$term-bright-green: #84f5e7; // Ansi bright green
+$term-bright-blue: #37c3bd; // Ansi bright blue
+$term-bright-magenta: #f0c2ff; // Ansi bright magenta
+$term-bright-cyan: #7ae4d9; // Ansi bright cyan
+$term-bright-white: #ffffff; // Bright white
+$term-bright-black: #5f5a66; // Alias to neutral-muted
+
+// Misc UI
+$hover-pink: #ff3c87; // Button hover background
+$focus-outline: #df1b6c; // focus border base (#df1b6c88)
+$scrollbar-track: #4a4755; // Scrollbar active background base (#4a475566)
+$scrollbar-thumb: #4a4755; // Scrollbar base (#4a475544)
+$overlay-code-lens: #f5eaec; // CodeLens base (#f5eaec99)
+$link-active: #df1b6c; // Active link
+$link-cool: #2bb4af; // Notification link accent
+
+// Additional semantic references
+$shadow-generic: #23212dc9; // from #00000080 shadow alpha removed
+
+// --- Supplementary bases (added for token/theme mapping) ---
+$bracket-border: #95ddda; // Bracket match border base
+$bracket-match-bg: #88b7b5; // Bracket match background base
+$indent-guide-active: #d7c7ce; // Active indent guide base

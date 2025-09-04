@@ -4,4 +4,7 @@
 dist/
 .dev/
 src/sass/
+src/themes/
 scripts/
+
+src/schema.json
