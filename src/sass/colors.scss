@@ -5,6 +5,7 @@ $secondary-500: #2bb4af; // Cool accent alt
 
 // Text & Foreground
 $foreground-100: #f5eaec; // Foreground (base text)
+$editor-foreground: #cfc9ca; // Editor foreground
 
 // Background Layers
 $bg-900: #1f1e26; // Workbench base
@@ -39,12 +40,12 @@ $number-500: #b82696; // Number primary token
 $number-alt-400: #e8c36a; // Legacy alt number (warm yellow)
 $boolean-500: #ff4d96; // Boolean / Null (standard theme)
 $boolean-alt-500: #f06ba2; // Boolean alt (fractured variant)
-$function-400: #f7d1e1; // Function / Method (sakura pink original)
-$function-500: #f4a86a; // Function / Method (fractured orange variant)
-$variable-500: #d1bbbe; // Variable (semantic token variant)
+$function-dn: #f7d1e1; // Function / Method (sakura pink original)
+$function-df: #f4a86a; // Function / Method (fractured orange variant)
+$variable-df: #cfc9ca; // Variable (semantic token variant)
 $variable-alt-500: #9ad1ff; // Parameter / accent variable
-$property-400: #f4c1d5; // Property soft pink
-$property-500: #7fd4cc; // Property teal (fractured)
+$property-dn: #f4c1d5; // Property soft pink
+$property-df: #7fd4cc; // Property teal (fractured)
 $class-500: #e0a7ff; // Class
 $interface-500: #cc67e3; // Interface / Type / Enum
 $module-500: #ffcf6b; // Module / Namespace (fractured) / enumMember alt
@@ -70,7 +71,7 @@ $keyword-base: #4f5a90; // Non-control keyword (uniform)
 $keyword-base-alt: #6176d1; // Non-control keyword alt (fractured #6176d1be)
 
 // Status / Feedback & Git
-$success-500: #14c759; // Added / success
+$success-500: #84cd4c; // Added / success
 $warning-500: #ffcf6b; // Modified / warning highlight
 $error-500: #ff4d96; // Error / deleted resource
 $error-alt-500: #e82c55; // Deleted gutter alt
@@ -81,12 +82,23 @@ $neutral-strong: #ba3b70; // Active line number accent
 $ignored-500: #7c707e; // Ignored resource
 
 // Extended Bright / Terminal Colors
-$term-bright-green: #84f5e7; // Ansi bright green
-$term-bright-blue: #37c3bd; // Ansi bright blue
-$term-bright-magenta: #f0c2ff; // Ansi bright magenta
-$term-bright-cyan: #7ae4d9; // Ansi bright cyan
-$term-bright-white: #ffffff; // Bright white
-$term-bright-black: #5f5a66; // Alias to neutral-muted
+$term-d-yellow: #e8c36a; // Ansi yellow
+$term-d-cyan: #7fd4cc; // Ansi cyan
+$term-d-magenta: #e0a7ff; // Ansi magenta
+$term-d-red: $primary-500; // Ansi red
+$term-d-blue: $secondary-500; // Ansi blue
+$term-d-green: $string-500; // Ansi green
+$term-d-foreground: $foreground-100; // Ansi white
+$term-d-background: $bg-800; // Ansi black
+$term-d-black: $border-subtle; // Ansi black
+$term-d-natural-black: $neutral-muted; // Ansi black (natural)
+$term-d-bright-red: #e9386d; // Ansi red
+$term-d-bright-green: #84f5e7; // Ansi bright green
+$term-d-bright-blue: #37c3bd; // Ansi bright blue
+$term-d-bright-magenta: #cc67e3; // Ansi bright magenta
+$term-d-bright-cyan: #7ae4d9; // Ansi bright cyan
+$term-d-bright-white: #ffffff; // Bright white
+$term-d-bright-black: #5f5a66; // Alias to neutral-muted
 
 // Misc UI
 $hover-pink: #ff3c87; // Button hover background

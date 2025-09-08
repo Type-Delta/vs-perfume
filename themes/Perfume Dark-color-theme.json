@@ -13,7 +13,7 @@
 		"errorForeground": "#ff4d96",
 		// Editor
 		"editor.background": "#1f1e26",
-		"editor.foreground": "#d1bbbe",
+		"editor.foreground": "#cfc9ca",
 		"editorCursor.foreground": "#ff4d96",
 		"editor.selectionBackground": "#df1b6c45",
 		"editorLineNumber.foreground": "#5f5a66",
@@ -31,7 +31,7 @@
 		"editorGutter.background": "#1f1e26",
 		"editorGutter.modifiedBackground": "#ffcf6b",
 		"editorGutter.deletedBackground": "#e82c55",
-		"editorGutter.addedBackground": "#14c759",
+		"editorGutter.addedBackground": "#84cd4c",
 		"editorIndentGuide.background1": "#3a374454",
 		"editorIndentGuide.activeBackground1": "#d7c7ce4f",
 		"editorWhitespace.foreground": "#3a374454",
@@ -146,7 +146,7 @@
 		"terminal.ansiBrightGreen": "#84f5e7",
 		"terminal.ansiBrightYellow": "#ffcf6b",
 		"terminal.ansiBrightBlue": "#37c3bd",
-		"terminal.ansiBrightMagenta": "#f0c2ff",
+		"terminal.ansiBrightMagenta": "#cc67e3",
 		"terminal.ansiBrightCyan": "#7ae4d9",
 		"terminal.ansiBrightWhite": "#ffffff",
 		"editorMarkerNavigation.background": "#23212d",
@@ -157,7 +157,7 @@
 		"peekViewEditor.matchHighlightBackground": "#df1b6c21",
 		// Git Explorer Decorations
 		"gitDecoration.modifiedResourceForeground": "#ffcf6b",
-		"gitDecoration.addedResourceForeground": "#14c759",
+		"gitDecoration.addedResourceForeground": "#84cd4c",
 		"gitDecoration.deletedResourceForeground": "#ff4d96",
 		"gitDecoration.untrackedResourceForeground": "#7fd4cc",
 		"gitDecoration.ignoredResourceForeground": "#7c707e",
@@ -186,9 +186,9 @@
 		"symbolIcon.numberForeground": "#c73a78"
 	},
 	"semanticTokenColors": {
-		"variable": { "foreground": "#d1bbbe" },
+		"variable": { "foreground": "#cfc9ca" },
 		"parameter": { "foreground": "#9ad1ff" },
-		"property": { "foreground": "#d1bbbecc" },
+		"property": { "foreground": "#cfc9cacc" },
 		"function": { "foreground": "#dd6798" },
 		"method": { "foreground": "#dd6798" },
 		"class": { "foreground": "#e0a7ff", "bold": true },
