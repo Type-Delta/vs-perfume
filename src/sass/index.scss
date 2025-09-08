@@ -15,7 +15,7 @@
 }
 
 /* Tooltips */
-.context-view.monaco-component {
+.context-view.monaco-component > * > * {
 	@include glass(true);
 }
 
@@ -84,6 +84,7 @@
 /* Hover & suggest widgets */
 .monaco-editor .monaco-hover,
 .editor-widget.suggest-widget,
+.editor-widget.parameter-hints-widget,
 .token-inspect-widget {
 	@include glass(true);
 	@include glassBorder();
@@ -155,29 +156,29 @@
 	background: transparent !important;
 }
 
-.part.statusbar .statusbar-item[aria-label*="master"],
-.part.statusbar .statusbar-item[aria-label*="main"] {
+.part.statusbar .statusbar-item[aria-label*="master"]:nth-child(2) ,
+.part.statusbar .statusbar-item[aria-label*="main"]:nth-child(2) {
   @include gitBranchIndicator(var(--perfume-accent));
 }
 
-.part.statusbar .statusbar-item[aria-label*="dev"] {
+.part.statusbar .statusbar-item[aria-label*="dev"]:nth-child(2) {
   @include gitBranchIndicator(var(--perfume-accent-alt));
 }
 
-.part.statusbar .statusbar-item[aria-label*="feat"] {
+.part.statusbar .statusbar-item[aria-label*="feat"]:nth-child(2) {
   @include gitBranchIndicator(#ff8c00);
 }
 
-.part.statusbar .statusbar-item[aria-label*="release"] {
+.part.statusbar .statusbar-item[aria-label*="release"]:nth-child(2) {
   @include gitBranchIndicator(#8713c5);
 }
 
-.part.statusbar .statusbar-item[aria-label*="fix"] {
+.part.statusbar .statusbar-item[aria-label*="fix"]:nth-child(2) {
   @include gitBranchIndicator(#80db2b);
 }
 
 /* Buttons refinement */
-.monaco-workbench .monaco-button,
+.monaco-workbench .monaco-button:not(.toggle-replace-button),
 .monaco-text-button {
 	border-radius: var(--perfume-radius-sm) !important;
 	letter-spacing: .5px !important;
@@ -305,10 +306,8 @@
 
 /* Find widget */
 .find-widget {
-	border: 1px solid var(--perfume-border) !important;
-	background: #2a2834dd !important;
-	backdrop-filter: blur(var(--perfume-blur-sm)) !important;
-	border-radius: 0 0 var(--perfume-radius-sm) var(--perfume-radius-sm) !important;
+	@include glass(true);
+   @include glassBorder();
 }
 
 /* Inline suggestions ghost text clarity */
