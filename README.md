@@ -39,7 +39,7 @@ You can install the theme directly from the **VS Code Marketplace** [here](https
 
 CSS overrides are required to achieve the glassmorphism effect.
 
-Please note that **every time VS Code updates, you need to re-enable the custom CSS and JS extension again.** As it modifies the core files of VS Code and would be reverted on update.
+Please note that **every time VS Code updates, you would need to re-enable the custom CSS and JS extension again.** As it modifies the core files of VS Code and would be reverted on every update.
 
 This step is recommended BUT ***OPTIONAL*** and the theme would look good without it.
 
@@ -53,3 +53,18 @@ This step is recommended BUT ***OPTIONAL*** and the theme would look good withou
    ],
    ```
 4. Open the command palette (`Ctrl+Shift+P` or `⌘+Shift+P`) and run **"Enable Custom CSS and JS"** command.
+
+## 🎨 Gallery
+
+> [!NOTE]
+> All screenshots are taken with the CSS overrides enabled.
+
+### Dark Themes
+
+#### Dark (normal ver.)
+
+![Dark (normal ver.)](https://raw.githubusercontent.com/Type-Delta/vs-perfume/refs/heads/master/assets/dark_full_beta3.png)
+
+#### Dark Fractured (more colors)
+
+![Dark Fractured (more colors)](https://raw.githubusercontent.com/Type-Delta/vs-perfume/refs/heads/master/assets/dark-fractured_full_beta3.png)
