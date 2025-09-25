@@ -66,7 +66,7 @@ $operator-cool: #79b7b5; // Fractured operator base
 $operator-assignment: #ff4d96; // Assignment operator (uniform)
 $operator-assignment-alt: #14c759; // Assignment operator (fractured #14c759c7 base)
 $keyword-control: #df1b6c; // Control flow keyword (uniform)
-$keyword-control-alt: #ecd926; // Control flow keyword (fractured #ecd926d7)
+$keyword-control-alt: #e7b94b; // Control flow keyword (fractured #ecd926d7)
 $keyword-base: #4f5a90; // Non-control keyword (uniform)
 $keyword-base-alt: #6176d1; // Non-control keyword alt (fractured #6176d1be)
 
@@ -82,9 +82,9 @@ $neutral-strong: #ba3b70; // Active line number accent
 $ignored-500: #7c707e; // Ignored resource
 
 // Extended Bright / Terminal Colors
-$term-d-yellow: #e8c36a; // Ansi yellow
+$term-d-yellow: #e7b94b; // Ansi yellow
 $term-d-cyan: #7fd4cc; // Ansi cyan
-$term-d-magenta: #e0a7ff; // Ansi magenta
+$term-d-magenta: #cc67e3; // Ansi magenta
 $term-d-red: $primary-500; // Ansi red
 $term-d-blue: $secondary-500; // Ansi blue
 $term-d-green: $string-500; // Ansi green
@@ -93,9 +93,10 @@ $term-d-background: $bg-800; // Ansi black
 $term-d-black: $border-subtle; // Ansi black
 $term-d-natural-black: $neutral-muted; // Ansi black (natural)
 $term-d-bright-red: #e9386d; // Ansi red
-$term-d-bright-green: #84f5e7; // Ansi bright green
+$term-d-bright-green: #a7d782; // Ansi bright green
 $term-d-bright-blue: #37c3bd; // Ansi bright blue
-$term-d-bright-magenta: #cc67e3; // Ansi bright magenta
+$term-d-bright-yellow: $warning-500; // Ansi bright yellow
+$term-d-bright-magenta: #e0a7ff; // Ansi bright magenta
 $term-d-bright-cyan: #7ae4d9; // Ansi bright cyan
 $term-d-bright-white: #ffffff; // Bright white
 $term-d-bright-black: #5f5a66; // Alias to neutral-muted
@@ -115,4 +116,4 @@ $shadow-generic: #23212dc9; // from #00000080 shadow alpha removed
 // --- Supplementary bases (added for token/theme mapping) ---
 $bracket-border: #95ddda; // Bracket match border base
 $bracket-match-bg: #88b7b5; // Bracket match background base
-$indent-guide-active: #d7c7ce; // Active indent guide base
+$indent-guide-active: #e0d9dc; // Active indent guide base

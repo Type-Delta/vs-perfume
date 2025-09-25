@@ -45,6 +45,8 @@
 		"editorSuggestWidget.selectedBackground": "var:selection-hover 20%",
 		"editorGroup.border": "var:border-subtle",
 		"editorGroupHeader.tabsBackground": "var:bg-800",
+		// Quick Input
+		"quickInput.background": "var:bg-700 93%",
 		// Editor Breadcrumb
 		"breadcrumb.foreground": "var:foreground-100 40%",
 		"breadcrumb.activeSelectionForeground": "var:foreground-100",
@@ -131,20 +133,20 @@
 		"notificationLink.foreground": "var:secondary-500",
 		// Terminal
 		"terminal.background": "var:bg-800",
-		"terminal.foreground": "var:foreground-100",
+		"terminal.foreground": "var:term-d-foreground",
 		"terminalCursor.foreground": "var:error-500",
-		"terminal.ansiBlack": "var:border-subtle",
-		"terminal.ansiRed": "var:primary-500",
-		"terminal.ansiGreen": "var:string-alt-400",
-		"terminal.ansiYellow": "var:number-alt-400",
-		"terminal.ansiBlue": "var:secondary-500",
-		"terminal.ansiMagenta": "var:class-500",
-		"terminal.ansiCyan": "var:property-df",
-		"terminal.ansiWhite": "var:foreground-100",
-		"terminal.ansiBrightBlack": "var:neutral-muted",
-		"terminal.ansiBrightRed": "var:error-500",
+		"terminal.ansiBlack": "var:term-d-black",
+		"terminal.ansiRed": "var:term-d-red",
+		"terminal.ansiGreen": "var:term-d-green",
+		"terminal.ansiYellow": "var:term-d-yellow",
+		"terminal.ansiBlue": "var:term-d-blue",
+		"terminal.ansiMagenta": "var:term-d-magenta",
+		"terminal.ansiCyan": "var:term-d-cyan",
+		"terminal.ansiWhite": "var:term-d-foreground",
+		"terminal.ansiBrightBlack": "var:term-d-natural-black",
+		"terminal.ansiBrightRed": "var:term-d-bright-red",
 		"terminal.ansiBrightGreen": "var:term-d-bright-green",
-		"terminal.ansiBrightYellow": "var:warning-500",
+		"terminal.ansiBrightYellow": "var:term-d-bright-yellow",
 		"terminal.ansiBrightBlue": "var:term-d-bright-blue",
 		"terminal.ansiBrightMagenta": "var:term-d-bright-magenta",
 		"terminal.ansiBrightCyan": "var:term-d-bright-cyan",
@@ -260,13 +262,13 @@
 		{
 			"name": "Control Flow Keyword",
 			"scope": ["keyword.control.return", "keyword.control.flow"],
-			"settings": { "foreground": "#df1b6c", "fontStyle": "bold italic" }
+			"settings": { "foreground": "#4f5a90", "fontStyle": "bold italic" }
 		},
 		// Operators - Assignment (bold pink)
 		{
 			"name": "Operator Assignment",
 			"scope": ["keyword.operator.assignment"],
-			"settings": { "foreground": "#ff4d96", "fontStyle": "bold italic" }
+			"settings": { "foreground": "#14c759c7", "fontStyle": "bold italic" }
 		},
 		// Operators - Logical (pink standard)
 		{

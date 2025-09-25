@@ -45,6 +45,8 @@
 		"editorSuggestWidget.selectedBackground": "var:selection-hover 20%",
 		"editorGroup.border": "var:border-subtle",
 		"editorGroupHeader.tabsBackground": "var:bg-800",
+		// Quick Input
+		"quickInput.background": "var:bg-700 93%",
 		// Editor Breadcrumb
 		"breadcrumb.foreground": "var:foreground-100 40%",
 		"breadcrumb.activeSelectionForeground": "var:foreground-100",
@@ -142,9 +144,9 @@
 		"terminal.ansiCyan": "var:term-d-cyan",
 		"terminal.ansiWhite": "var:term-d-foreground",
 		"terminal.ansiBrightBlack": "var:term-d-natural-black",
-		"terminal.ansiBrightRed": "var:error-500",
+		"terminal.ansiBrightRed": "var:term-d-bright-red",
 		"terminal.ansiBrightGreen": "var:term-d-bright-green",
-		"terminal.ansiBrightYellow": "var:warning-500",
+		"terminal.ansiBrightYellow": "var:term-d-bright-yellow",
 		"terminal.ansiBrightBlue": "var:term-d-bright-blue",
 		"terminal.ansiBrightMagenta": "var:term-d-bright-magenta",
 		"terminal.ansiBrightCyan": "var:term-d-bright-cyan",

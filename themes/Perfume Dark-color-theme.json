@@ -33,7 +33,7 @@
 		"editorGutter.deletedBackground": "#e82c55",
 		"editorGutter.addedBackground": "#84cd4c",
 		"editorIndentGuide.background1": "#3a374454",
-		"editorIndentGuide.activeBackground1": "#d7c7ce4f",
+		"editorIndentGuide.activeBackground1": "#e0d9dc4f",
 		"editorWhitespace.foreground": "#3a374454",
 		"editorRuler.foreground": "#3a374454",
 		"editorHoverWidget.background": "#2f2d3aed",
@@ -45,6 +45,8 @@
 		"editorSuggestWidget.selectedBackground": "#df1b6c33",
 		"editorGroup.border": "#3a3744",
 		"editorGroupHeader.tabsBackground": "#23212d",
+		// Quick Input
+		"quickInput.background": "#2a2834ed",
 		// Editor Breadcrumb
 		"breadcrumb.foreground": "#f5eaec66",
 		"breadcrumb.activeSelectionForeground": "#f5eaec",
@@ -135,18 +137,18 @@
 		"terminalCursor.foreground": "#ff4d96",
 		"terminal.ansiBlack": "#3a3744",
 		"terminal.ansiRed": "#df1b6c",
-		"terminal.ansiGreen": "#6be3d6",
-		"terminal.ansiYellow": "#e8c36a",
+		"terminal.ansiGreen": "#84cd4c",
+		"terminal.ansiYellow": "#e7b94b",
 		"terminal.ansiBlue": "#2bb4af",
-		"terminal.ansiMagenta": "#e0a7ff",
+		"terminal.ansiMagenta": "#cc67e3",
 		"terminal.ansiCyan": "#7fd4cc",
 		"terminal.ansiWhite": "#f5eaec",
 		"terminal.ansiBrightBlack": "#5f5a66",
-		"terminal.ansiBrightRed": "#ff4d96",
-		"terminal.ansiBrightGreen": "#84f5e7",
+		"terminal.ansiBrightRed": "#e9386d",
+		"terminal.ansiBrightGreen": "#a7d782",
 		"terminal.ansiBrightYellow": "#ffcf6b",
 		"terminal.ansiBrightBlue": "#37c3bd",
-		"terminal.ansiBrightMagenta": "#cc67e3",
+		"terminal.ansiBrightMagenta": "#e0a7ff",
 		"terminal.ansiBrightCyan": "#7ae4d9",
 		"terminal.ansiBrightWhite": "#ffffff",
 		"editorMarkerNavigation.background": "#23212d",
@@ -260,13 +262,13 @@
 		{
 			"name": "Control Flow Keyword",
 			"scope": ["keyword.control.return", "keyword.control.flow"],
-			"settings": { "foreground": "#df1b6c", "fontStyle": "bold italic" }
+			"settings": { "foreground": "#4f5a90", "fontStyle": "bold italic" }
 		},
 		// Operators - Assignment (bold pink)
 		{
 			"name": "Operator Assignment",
 			"scope": ["keyword.operator.assignment"],
-			"settings": { "foreground": "#ff4d96", "fontStyle": "bold italic" }
+			"settings": { "foreground": "#14c759c7", "fontStyle": "bold italic" }
 		},
 		// Operators - Logical (pink standard)
 		{
