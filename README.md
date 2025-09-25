@@ -2,7 +2,7 @@
 
 VS Code theme focused on frosted glassmorphism with vibrant colors.
 
-A theme inspired by the beauty of luxury *"Perfume"* bottles (especially the ones from Montelli family) and their intricate designs.
+A theme inspired by the beauty of luxury *"Perfumes"* (especially the ones from Montelli family) and their intricate designs.
 
 ![Preview](https://raw.githubusercontent.com/Type-Delta/vs-perfume/refs/heads/master/assets/dark-fractured_full_beta3.png)
 
@@ -15,6 +15,10 @@ A theme inspired by the beauty of luxury *"Perfume"* bottles (especially the one
 - Dark mode with vibrant colors.
 
 ## 🛠️ Installation
+
+### Install from VS Code Marketplace (Recommended)
+
+You can install the theme directly from the **VS Code Marketplace** [here](https://marketplace.visualstudio.com/items?itemName=type-delta.perfume).
 
 ### Install from source
 
