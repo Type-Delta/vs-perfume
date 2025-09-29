@@ -9,6 +9,7 @@ $enablePanelTransitions: false;
 $glassBlurAmount: 4px;
 $glassSaturateAmount: 190%;
 $glassBrightnessAmount: 70%;
+$useGradientBorder: true;
 
 :root {
 	--perfume-accent: #df1b6c;
@@ -22,7 +23,7 @@ $glassBrightnessAmount: 70%;
 	--perfume-bg-overlay: #2f2d3a;
 	--perfume-border: #3a3744;
 	--perfume-border-strong: #4a4755;
-	--perfume-shadow-color: #23212dc9;
+	--perfume-shadow-color: rgba(0, 0, 0, 0.36);
 	--perfume-fg: #f5eaec;
 	--perfume-radius-sm: 4px;
 	--perfume-radius-md: 6px;

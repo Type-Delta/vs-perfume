@@ -7,14 +7,41 @@
 ) {
    background: glassBackground($bg-color1, $bg-color2) !important;
    backdrop-filter: glassEffect();
+
    @if $useShadows {
-      box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+      box-shadow: 0 0 8px 2px var(--perfume-shadow-color) !important;
+   }
+   @else {
+      box-shadow: none !important;
    }
 }
 
 @mixin glassBorder($border-color: var(--perfume-border-strong)) {
    border-radius: var(--perfume-radius-sm) !important;
-   border: 1px solid $border-color !important;
+
+   @if $useGradientBorder {
+      &::before {
+         content: "";
+         position: absolute;
+         inset: 0;
+         border-radius: inherit;
+         z-index: -1;
+         background: linear-gradient(
+            188deg,
+            var(--perfume-border-strong),
+            color-mix(in srgb, var(--perfume-border), transparent 30%) 45%,
+         );
+         mask:
+            linear-gradient(black 0 0) border-box,
+            linear-gradient(black 0 0) padding-box;
+         background-origin: border-box;
+         mask-composite: subtract;
+         border: 1px solid transparent;
+      }
+   }
+   @else {
+      border: 1px solid $border-color !important;
+   }
 }
 
 @mixin gitBranchIndicator($color) {
@@ -24,4 +51,14 @@
       color-mix(in srgb, $color, transparent 65%) 20%,
       transparent 48%
    ) !important;
+}
+
+@mixin textGlow($color: var(--perfume-accent-glow), $transparency: 50%) {
+   --glow-color: color-mix(in srgb, #{ $color }, transparent #{ $transparency });
+   text-shadow:
+      0 0 5px var(--glow-color),
+		0 0 10px var(--glow-color),
+		0 0 20px var(--glow-color),
+		0 0 40px var(--glow-color),
+		0 0 80px var(--glow-color);
 }

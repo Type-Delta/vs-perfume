@@ -15,7 +15,7 @@
   --perfume-bg-overlay: #2f2d3a;
   --perfume-border: #3a3744;
   --perfume-border-strong: #4a4755;
-  --perfume-shadow-color: #23212dc9;
+  --perfume-shadow-color: rgba(0, 0, 0, 0.36);
   --perfume-fg: #f5eaec;
   --perfume-radius-sm: 4px;
   --perfume-radius-md: 6px;
@@ -29,7 +29,7 @@
 .context-view.monaco-component > * > * {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
   backdrop-filter: blur(4px) saturate(190%) brightness(70%);
-  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+  box-shadow: 0 0 8px 2px var(--perfume-shadow-color) !important;
 }
 
 /* Title bar */
@@ -85,9 +85,21 @@
 .quick-input-widget {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
   backdrop-filter: blur(4px) saturate(190%) brightness(70%);
+  box-shadow: none !important;
   border-radius: var(--perfume-radius-sm) !important;
-  border: 1px solid var(--perfume-border-strong) !important;
   box-shadow: 0 8px 32px -12px var(--perfume-shadow-color), 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
+}
+.quick-input-widget::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(188deg, var(--perfume-border-strong), color-mix(in srgb, var(--perfume-border), transparent 30%) 45%);
+  mask: linear-gradient(black 0 0) border-box, linear-gradient(black 0 0) padding-box;
+  background-origin: border-box;
+  mask-composite: subtract;
+  border: 1px solid transparent;
 }
 
 .quick-input-widget .monaco-list-row.focused {
@@ -102,9 +114,23 @@
 .token-inspect-widget {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
   backdrop-filter: blur(4px) saturate(190%) brightness(70%);
-  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+  box-shadow: 0 0 8px 2px var(--perfume-shadow-color) !important;
   border-radius: var(--perfume-radius-sm) !important;
-  border: 1px solid var(--perfume-border-strong) !important;
+}
+.monaco-editor .monaco-hover::before,
+.editor-widget.suggest-widget::before,
+.editor-widget.parameter-hints-widget::before,
+.token-inspect-widget::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(188deg, var(--perfume-border-strong), color-mix(in srgb, var(--perfume-border), transparent 30%) 45%);
+  mask: linear-gradient(black 0 0) border-box, linear-gradient(black 0 0) padding-box;
+  background-origin: border-box;
+  mask-composite: subtract;
+  border: 1px solid transparent;
 }
 
 .monaco-resizable-hover {
@@ -118,24 +144,46 @@
 .context-view.monaco-component .monaco-scrollable-element {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
   backdrop-filter: blur(4px) saturate(190%) brightness(70%);
-  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+  box-shadow: 0 0 8px 2px var(--perfume-shadow-color) !important;
 }
 
 /* Menubar Items */
 .menubar-menu-items-holder {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
   backdrop-filter: blur(4px) saturate(190%) brightness(70%);
-  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+  box-shadow: 0 0 8px 2px var(--perfume-shadow-color) !important;
   border-radius: var(--perfume-radius-sm) !important;
-  border: 1px solid var(--perfume-border-strong) !important;
+}
+.menubar-menu-items-holder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(188deg, var(--perfume-border-strong), color-mix(in srgb, var(--perfume-border), transparent 30%) 45%);
+  mask: linear-gradient(black 0 0) border-box, linear-gradient(black 0 0) padding-box;
+  background-origin: border-box;
+  mask-composite: subtract;
+  border: 1px solid transparent;
 }
 
 .menubar-menu-items-holder .monaco-submenu > * {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
   backdrop-filter: blur(4px) saturate(190%) brightness(70%);
-  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+  box-shadow: 0 0 8px 2px var(--perfume-shadow-color) !important;
   border-radius: var(--perfume-radius-sm) !important;
-  border: 1px solid var(--perfume-border-strong) !important;
+}
+.menubar-menu-items-holder .monaco-submenu > *::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(188deg, var(--perfume-border-strong), color-mix(in srgb, var(--perfume-border), transparent 30%) 45%);
+  mask: linear-gradient(black 0 0) border-box, linear-gradient(black 0 0) padding-box;
+  background-origin: border-box;
+  mask-composite: subtract;
+  border: 1px solid transparent;
 }
 
 .menubar-menu-items-holder > * {
@@ -146,9 +194,20 @@
 .quick-input-widget {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
   backdrop-filter: blur(4px) saturate(190%) brightness(70%);
-  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+  box-shadow: 0 0 8px 2px var(--perfume-shadow-color) !important;
   border-radius: var(--perfume-radius-sm) !important;
-  border: 1px solid var(--perfume-border-strong) !important;
+}
+.quick-input-widget::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(188deg, var(--perfume-border-strong), color-mix(in srgb, var(--perfume-border), transparent 30%) 45%);
+  mask: linear-gradient(black 0 0) border-box, linear-gradient(black 0 0) padding-box;
+  background-origin: border-box;
+  mask-composite: subtract;
+  border: 1px solid transparent;
 }
 
 .quick-input-widget .monaco-list-rows {
@@ -333,9 +392,21 @@
   --vscode-editorWidget-background: "";
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
   backdrop-filter: blur(4px) saturate(190%) brightness(70%);
-  box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;
+  box-shadow: 0 0 8px 2px var(--perfume-shadow-color) !important;
   border-radius: var(--perfume-radius-sm) !important;
-  border: 1px solid var(--perfume-border-strong) !important;
+}
+.find-widget::before,
+.simple-find-part::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(188deg, var(--perfume-border-strong), color-mix(in srgb, var(--perfume-border), transparent 30%) 45%);
+  mask: linear-gradient(black 0 0) border-box, linear-gradient(black 0 0) padding-box;
+  background-origin: border-box;
+  mask-composite: subtract;
+  border: 1px solid transparent;
 }
 
 /* Inline suggestions ghost text clarity */
@@ -393,6 +464,48 @@ s .show-file-icons .file-icon::before {
 
 .monaco-editor .line-numbers.active-line-number {
   --glow-color: color-mix(in srgb, var(--perfume-accent), transparent 50%);
+  text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 40px var(--glow-color), 0 0 80px var(--glow-color);
+}
+
+/* Gutter's breakpoint icon */
+html body .monaco-editor .glyph-margin-widgets .codicon.codicon-debug-breakpoint,
+html body .monaco-editor .glyph-margin-widgets .codicon.codicon-debug-breakpoint-function,
+html body .monaco-editor .glyph-margin-widgets .codicon.codicon-debug-breakpoint-conditional,
+html body .monaco-editor .glyph-margin-widgets .codicon.codicon-debug-breakpoint-data,
+html body .monaco-editor .glyph-margin-widgets .codicon.codicon-debug-breakpoint-log,
+html body .monaco-editor .glyph-margin-widgets .codicon.codicon-debug-breakpoint-unsupported,
+html body .monaco-editor .glyph-margin-widgets .codicon.codicon-debug-hint:not([class*=codicon-debug-breakpoint]):not([class*=codicon-debug-stackframe]),
+html body .monaco-editor .glyph-margin-widgets .codicon.codicon-debug-breakpoint.codicon.codicon-debug-stackframe-focused::after,
+html body .monaco-editor .glyph-margin-widgets .codicon.codicon-debug-breakpoint.codicon.codicon-debug-stackframe::after,
+.monaco-workbench .debug-breakpoints .codicon.codicon-debug-breakpoint,
+.monaco-workbench .debug-breakpoints .codicon.codicon-debug-breakpoint-function,
+.monaco-workbench .debug-breakpoints .codicon.codicon-debug-breakpoint-conditional,
+.monaco-workbench .debug-breakpoints .codicon.codicon-debug-breakpoint-data,
+.monaco-workbench .debug-breakpoints .codicon.codicon-debug-breakpoint-log,
+.monaco-workbench .debug-breakpoints .codicon.codicon-debug-breakpoint-unsupported,
+.monaco-workbench .debug-breakpoints .codicon.codicon-debug-hint:not([class*=codicon-debug-breakpoint]):not([class*=codicon-debug-stackframe]),
+.monaco-workbench .debug-breakpoints .codicon.codicon-debug-breakpoint.codicon.codicon-debug-stackframe-focused::after,
+.monaco-workbench .debug-breakpoints .codicon.codicon-debug-breakpoint.codicon.codicon-debug-stackframe::after,
+.monaco-workbench .disassembly-view .codicon.codicon-debug-breakpoint,
+.monaco-workbench .disassembly-view .codicon.codicon-debug-breakpoint-function,
+.monaco-workbench .disassembly-view .codicon.codicon-debug-breakpoint-conditional,
+.monaco-workbench .disassembly-view .codicon.codicon-debug-breakpoint-data,
+.monaco-workbench .disassembly-view .codicon.codicon-debug-breakpoint-log,
+.monaco-workbench .disassembly-view .codicon.codicon-debug-breakpoint-unsupported,
+.monaco-workbench .disassembly-view .codicon.codicon-debug-hint:not([class*=codicon-debug-breakpoint]):not([class*=codicon-debug-stackframe]),
+.monaco-workbench .disassembly-view .codicon.codicon-debug-breakpoint.codicon.codicon-debug-stackframe-focused::after,
+.monaco-workbench .disassembly-view .codicon.codicon-debug-breakpoint.codicon.codicon-debug-stackframe::after,
+.monaco-editor .contentWidgets .codicon.codicon-debug-breakpoint,
+.monaco-editor .contentWidgets .codicon.codicon-debug-breakpoint-function,
+.monaco-editor .contentWidgets .codicon.codicon-debug-breakpoint-conditional,
+.monaco-editor .contentWidgets .codicon.codicon-debug-breakpoint-data,
+.monaco-editor .contentWidgets .codicon.codicon-debug-breakpoint-log,
+.monaco-editor .contentWidgets .codicon.codicon-debug-breakpoint-unsupported,
+.monaco-editor .contentWidgets .codicon.codicon-debug-hint:not([class*=codicon-debug-breakpoint]):not([class*=codicon-debug-stackframe]),
+.monaco-editor .contentWidgets .codicon.codicon-debug-breakpoint.codicon.codicon-debug-stackframe-focused::after,
+.monaco-editor .contentWidgets .codicon.codicon-debug-breakpoint.codicon.codicon-debug-stackframe::after {
+  color: rgb(234.1, 65.95, 116.3) !important;
+  --glow-color: color-mix(in srgb, #e9386d, transparent 64%);
   text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 40px var(--glow-color), 0 0 80px var(--glow-color);
 }
 
