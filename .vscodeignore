@@ -7,4 +7,5 @@ src/sass/
 src/themes/
 scripts/
 
+assets/*full*.png
 src/schema.json
