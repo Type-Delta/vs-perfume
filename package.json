@@ -40,7 +40,7 @@
     "build:themes": "node ./scripts/buildThemes.mjs && npm run format"
   },
   "devDependencies": {
-    "@vscode/vsce": "^3.6.0",
+    "@vscode/vsce": "^3.6.2",
     "sass": "^1.91.0"
   }
 }
