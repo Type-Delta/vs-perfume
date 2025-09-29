@@ -328,7 +328,9 @@
 }
 
 /* Find widget */
-.find-widget {
+.find-widget,
+.simple-find-part {
+  --vscode-editorWidget-background: "";
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
   backdrop-filter: blur(4px) saturate(190%) brightness(70%);
   box-shadow: 0 6px 24px -10px var(--perfume-shadow-color) !important;

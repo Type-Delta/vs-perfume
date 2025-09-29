@@ -26,6 +26,7 @@
 		"editor.wordHighlightStrongBackground": "var:primary-500 38%",
 		"editor.lineHighlightBackground": "var:line-highlight",
 		"editor.lineHighlightBorder": "var:line-highlight",
+		"editorWidget.background": "var:bg-700 93%",
 		"editorBracketMatch.background": "var:bracket-match-bg 13%",
 		"editorBracketMatch.border": "var:bracket-border 40%",
 		"editorGutter.background": "var:bg-900",

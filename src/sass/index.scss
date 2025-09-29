@@ -305,7 +305,11 @@
 }
 
 /* Find widget */
-.find-widget {
+.find-widget,
+.simple-find-part {
+	// Unset default background to avoid conflicts
+	--vscode-editorWidget-background: '';
+
 	@include glass(true);
    @include glassBorder();
 }
