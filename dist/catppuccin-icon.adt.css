@@ -1,0 +1,18 @@
+/**
+ * Adapter for Catppuccin Icons Theme
+ *
+ * This file contains styles for adapting the Catppuccin icons theme to match
+ * the overall aesthetic of Perfume.
+ *
+ * This file is part of the Perfume VS Code theme extension.
+ * It's released under the MIT License. See LICENSE for details.
+ * Author: Type-Delta
+ * Repository: https://github.com/Type-Delta/vs-perfume
+ */
+
+
+/* Explorer Icons */
+.show-file-icons .folder-icon::before,
+.show-file-icons .file-icon::before {
+  filter: contrast(0.9) saturate(270%);
+}

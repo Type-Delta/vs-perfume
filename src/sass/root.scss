@@ -1,7 +1,11 @@
-/* Perfume Dark VS Code CSS Overrides
-	Goal: Glassmorphism, subtle accents, consistent accent color usage.
-	NOTE: All rules use !important as required (theme stylesheet loads before core).
-	NOTE: .css files are now generated from .scss sources do not modify them directly.
+/** Perfume Dark VS Code CSS Overrides
+ * Goal: Glassmorphism, subtle accents, consistent accent color usage.
+ * NOTE: .css files are now generated from .scss sources do not modify them directly.
+ *
+ * This file is part of the Perfume VS Code theme extension.
+ * It's released under the MIT License. See LICENSE for details.
+ * Author: Type-Delta
+ * Repository: https://github.com/Type-Delta/vs-perfume
 */
 
 // Panel transitions (still experimental)

@@ -49,10 +49,29 @@ This step is recommended BUT ***OPTIONAL*** and the theme would look good withou
 
    ```json
    "vscode_custom_css.imports": [
-      "https://raw.githubusercontent.com/Type-Delta/vs-perfume/refs/heads/master/src/vs-overwrite.css",
+      "https://raw.githubusercontent.com/Type-Delta/vs-perfume/refs/heads/master/dist/vs-overwrite.css",
    ],
    ```
 4. Open the command palette (`Ctrl+Shift+P` or `⌘+Shift+P`) and run **"Enable Custom CSS and JS"** command.
+
+## 🔗 Integration
+
+### Catppuccin Icons
+
+It's recommended to use the Catppuccin Icons with this theme for a more cohesive look, but hey, it's up to you!
+
+If you want to use the Catppuccin icons with this theme, you can install the [Catppuccin Icons](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons) extension from the VS Code marketplace.
+Then, add the following line to the `vscode_custom_css.imports` setting in your settings.json:
+
+```jsonc
+"vscode_custom_css.imports": [
+   "https://raw.githubusercontent.com/Type-Delta/vs-perfume/refs/heads/master/dist/vs-overwrite.css",
+   // 👇 add this line
+   "https://raw.githubusercontent.com/Type-Delta/vs-perfume/refs/heads/master/dist/catppuccin-icon.adt.css"
+],
+```
+
+What this does is tweak those icons to better match the overall aesthetic of the Perfume theme.
 
 ## 🎨 Gallery
 

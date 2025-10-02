@@ -1,7 +1,3 @@
-/**
- * **This file is deprecated and will be removed in future versions.
- * Please use vvs-overwrite.css in the dist folder instead.**
-*/
 /* Perfume Dark VS Code CSS Overrides
 	Goal: Glassmorphism, subtle accents, consistent accent color usage.
 	NOTE: All rules use !important as required (theme stylesheet loads before core).

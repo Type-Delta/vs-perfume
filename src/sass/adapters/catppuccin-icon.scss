@@ -1,0 +1,12 @@
+/**
+ * Adapter for Catppuccin Icons Theme
+ *
+ * This file contains styles for adapting the Catppuccin icons theme to match
+ * the overall aesthetic of Perfume.
+ */
+
+/* Explorer Icons */
+.show-file-icons .folder-icon::before,
+.show-file-icons .file-icon::before {
+   filter: contrast(.9) saturate(270%);
+}

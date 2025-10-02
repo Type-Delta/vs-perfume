@@ -33,7 +33,7 @@
   },
   "type": "module",
   "scripts": {
-    "compile-sass": "npx sass ./src/sass/index.scss:./src/vs-overwrite.css --no-source-map",
+    "compile-sass": "npx sass ./src/sass/index.scss:./dist/vs-overwrite.css --no-source-map && npx sass ./src/sass/adapters/catppuccin-icon.scss:./dist/catppuccin-icon.adt.css --no-source-map",
     "build": "npm run build:themes && npm run compile-sass && npx vsce package --pre-release --no-dependencies -o ./dist/perfume-beta3.vsix",
     "install": "npm run build && code --install-extension ./dist/perfume-beta3.vsix",
     "format": "node ./scripts/codeFormatter.js",

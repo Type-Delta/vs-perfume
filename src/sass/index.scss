@@ -378,11 +378,6 @@ body > .monaco-workbench {
    border: 1px solid var(--perfume-border) !important;
 }
 
-s/* Explorer Icons */
-.show-file-icons .file-icon::before {
-   filter: saturate(160%);
-}
-
 /* Gutter Number */
 .monaco-editor .line-numbers {
    text-shadow: 0 0 0 #ffffff00;
