@@ -1,11 +1,12 @@
 .vscode/**
 .vscode-test/**
 .gitignore
-dist/
 .dev/
 src/sass/
 src/themes/
 scripts/
 
+dist/*.vsix
+dist/.gitignore
 assets/*full*.png
 src/schema.json
