@@ -115,13 +115,22 @@
 }
 
 /* Menubar Items */
+.monaco-menu-container .monaco-scrollable-element,
 .menubar-menu-items-holder {
    @include glass(true);
    @include glassBorder();
+   overflow: visible !important;
+
+   & .monaco-menu {
+      overflow: visible !important;
+   }
 }
 .menubar-menu-items-holder .monaco-submenu > * {
    @include glass(true);
    @include glassBorder();
+
+   // FIXME: Since backdrop-filter doesn't work on overflow children a temp fix is to apply a solid bg for now
+   background: var(--perfume-bg-overlay) !important;
 }
 
 .menubar-menu-items-holder > * {

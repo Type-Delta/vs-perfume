@@ -1,7 +1,11 @@
-/* Perfume Dark VS Code CSS Overrides
-	Goal: Glassmorphism, subtle accents, consistent accent color usage.
-	NOTE: All rules use !important as required (theme stylesheet loads before core).
-	NOTE: .css files are now generated from .scss sources do not modify them directly.
+/** Perfume Dark VS Code CSS Overrides
+ * Goal: Glassmorphism, subtle accents, consistent accent color usage.
+ * NOTE: .css files are now generated from .scss sources do not modify them directly.
+ *
+ * This file is part of the Perfume VS Code theme extension.
+ * It's released under the MIT License. See LICENSE for details.
+ * Author: Type-Delta
+ * Repository: https://github.com/Type-Delta/vs-perfume
 */
 :root {
   --perfume-accent: #df1b6c;
@@ -148,12 +152,15 @@
 }
 
 /* Menubar Items */
+.monaco-menu-container .monaco-scrollable-element,
 .menubar-menu-items-holder {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
   backdrop-filter: blur(4px) saturate(190%) brightness(70%);
   box-shadow: 0 0 8px 2px var(--perfume-shadow-color) !important;
   border-radius: var(--perfume-radius-sm) !important;
+  overflow: visible !important;
 }
+.monaco-menu-container .monaco-scrollable-element::before,
 .menubar-menu-items-holder::before {
   content: "";
   position: absolute;
@@ -166,12 +173,17 @@
   mask-composite: subtract;
   border: 1px solid transparent;
 }
+.monaco-menu-container .monaco-scrollable-element .monaco-menu,
+.menubar-menu-items-holder .monaco-menu {
+  overflow: visible !important;
+}
 
 .menubar-menu-items-holder .monaco-submenu > * {
   background: linear-gradient(145deg, color-mix(in srgb, var(--perfume-bg-overlay), transparent 46%) 0%, color-mix(in srgb, var(--perfume-bg-elev), transparent 67%) 100%) !important;
   backdrop-filter: blur(4px) saturate(190%) brightness(70%);
   box-shadow: 0 0 8px 2px var(--perfume-shadow-color) !important;
   border-radius: var(--perfume-radius-sm) !important;
+  background: var(--perfume-bg-overlay) !important;
 }
 .menubar-menu-items-holder .monaco-submenu > *::before {
   content: "";
