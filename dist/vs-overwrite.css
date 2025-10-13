@@ -428,12 +428,6 @@
 }
 
 /* Settings editor cards */
-.settings-editor .settings-toc-container,
-.settings-editor .settings-tree-container {
-  background: rgba(42, 40, 52, 0.6666666667) !important;
-  backdrop-filter: blur(var(--perfume-blur-sm)) !important;
-}
-
 .settings-editor .monaco-list-row.focused {
   background: linear-gradient(90deg, var(--perfume-accent-weak) 40%, var(--perfume-accent-alt-tr) 100%) !important;
 }
@@ -522,13 +516,29 @@ html body .monaco-editor .glyph-margin-widgets .codicon.codicon-debug-breakpoint
 .notifications-toasts .monaco-list-rows,
 .notifications-toasts .monaco-list-container {
   background: transparent !important;
-  border-radius: var(--perfume-radius-md) !important;
 }
 
 .notifications-toasts .monaco-list-row .notification-list-item {
-  border: 1px solid var(--perfume-border) !important;
+  border-radius: var(--perfume-radius-md) !important;
+}
+.notifications-toasts .monaco-list-row .notification-list-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(188deg, var(--perfume-border-strong), color-mix(in srgb, var(--perfume-border), transparent 30%) 45%);
+  mask: linear-gradient(black 0 0) border-box, linear-gradient(black 0 0) padding-box;
+  background-origin: border-box;
+  mask-composite: subtract;
+  border: 1px solid transparent;
 }
 
 .notifications-toasts .monaco-list-row:hover .notification-list-item {
   border-color: var(--perfume-accent) !important;
+}
+
+/* Border radius for Notifications */
+.monaco-workbench > .notifications-toasts .notifications-list-container, .monaco-workbench > .notifications-toasts .notification-toast-container > .notification-toast, .monaco-workbench > .notifications-toasts .notification-toast-container > .notification-toast .monaco-scrollable-element, .monaco-workbench > .notifications-toasts .notification-toast-container > .notification-toast .monaco-list:not(.element-focused):focus:before, .monaco-workbench > .notifications-toasts .notification-toast-container > .notification-toast .monaco-list-row {
+  border-radius: var(--perfume-radius-md) !important;
 }

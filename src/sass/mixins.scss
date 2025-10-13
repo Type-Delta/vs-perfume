@@ -16,8 +16,8 @@
    }
 }
 
-@mixin glassBorder($border-color: var(--perfume-border-strong)) {
-   border-radius: var(--perfume-radius-sm) !important;
+@mixin glassBorder($border-color: var(--perfume-border-strong), $border-radius: var(--perfume-radius-sm), $useGradientBorder: true) {
+   border-radius: $border-radius !important;
 
    @if $useGradientBorder {
       &::before {

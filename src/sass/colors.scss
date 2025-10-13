@@ -1,6 +1,8 @@
 
 // Core / Brand
+$primary-600: #ba3b70;
 $primary-500: #df1b6c; // Primary / Accent
+$primary-400: #ff3c87;
 $secondary-500: #2bb4af; // Cool accent alt
 $generic-red: #e9386d; // Generic red (error, delete)
 
@@ -66,7 +68,7 @@ $operator-base: #4f5a90; // Operator / keyword dark blue (uniform theme)
 $operator-cool: #79b7b5; // Fractured operator base
 $operator-assignment: #ff4d96; // Assignment operator (uniform)
 $operator-assignment-alt: #14c759; // Assignment operator (fractured #14c759c7 base)
-$keyword-control: #df1b6c; // Control flow keyword (uniform)
+$keyword-control: $primary-500; // Control flow keyword (uniform)
 $keyword-control-alt: #e7b94b; // Control flow keyword (fractured #ecd926d7)
 $keyword-base: #4f5a90; // Non-control keyword (uniform)
 $keyword-base-alt: #6176d1; // Non-control keyword alt (fractured #6176d1be)
@@ -79,7 +81,7 @@ $error-alt-500: #e82c55; // Deleted gutter alt
 $info-500: #2bb4af; // Info / alt accent
 $attention-500: #e9386d; // List error foreground / invalid alt
 $neutral-muted: #5f5a66; // Line number / bright black
-$neutral-strong: #ba3b70; // Active line number accent
+$neutral-strong: $primary-600; // Active line number accent
 $ignored-500: #7c707e; // Ignored resource
 
 // Extended Bright / Terminal Colors
@@ -103,12 +105,12 @@ $term-d-bright-white: #ffffff; // Bright white
 $term-d-bright-black: #5f5a66; // Alias to neutral-muted
 
 // Misc UI
-$hover-pink: #ff3c87; // Button hover background
-$focus-outline: #df1b6c; // focus border base (#df1b6c88)
+$hover-pink: $primary-400; // Button hover background
+$focus-outline: $primary-500; // focus border base (#df1b6c88)
 $scrollbar-track: #4a4755; // Scrollbar active background base (#4a475566)
 $scrollbar-thumb: #4a4755; // Scrollbar base (#4a475544)
 $overlay-code-lens: #f5eaec; // CodeLens base (#f5eaec99)
-$link-active: #df1b6c; // Active link
+$link-active: $primary-500; // Active link
 $link-cool: #2bb4af; // Notification link accent
 
 // Additional semantic references
