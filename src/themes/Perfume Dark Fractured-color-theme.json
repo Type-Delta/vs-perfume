@@ -213,7 +213,7 @@
 		"decorator": { "foreground": "#6176d1be" },
 		"annotation": { "foreground": "#6176d1be" },
 		"macro": { "foreground": "#ffcf6b" },
-		"label": { "foreground": "#df1b6c" },
+		"label": { "foreground": "var:primary-500" },
 		"type": { "foreground": "#cc67e3", "italic": true },
 		"selfParameter": { "foreground": "#6176d1be" }
 	},
@@ -275,7 +275,7 @@
 		{
 			"name": "Operator Logical",
 			"scope": ["keyword.operator.logical"],
-			"settings": { "foreground": "#df1b6c" }
+			"settings": { "foreground": "var:primary-500" }
 		},
 		// Operators - Comparison, Arithmetic, Bitwise
 		{
@@ -405,6 +405,12 @@
 			"name": "HTML - XML tags",
 			"scope": ["entity.name.tag", "meta.tag.html"],
 			"settings": { "foreground": "#f06ba2" }
+		},
+		// Bash
+		{
+			"name": "Bash - Shebang",
+			"scope": ["meta.shebang.shell", "punctuation.definition.comment.shebang.shell"],
+			"settings": {"foreground": "var:primary-600", "fontStyle": "italic underline" }
 		}
 	]
 }

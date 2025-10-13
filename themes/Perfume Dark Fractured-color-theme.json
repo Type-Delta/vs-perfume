@@ -405,6 +405,12 @@
 			"name": "HTML - XML tags",
 			"scope": ["entity.name.tag", "meta.tag.html"],
 			"settings": { "foreground": "#f06ba2" }
+		},
+		// Bash
+		{
+			"name": "Bash - Shebang",
+			"scope": ["meta.shebang.shell", "punctuation.definition.comment.shebang.shell"],
+			"settings": {"foreground": "#ba3b70", "fontStyle": "italic underline" }
 		}
 	]
 }

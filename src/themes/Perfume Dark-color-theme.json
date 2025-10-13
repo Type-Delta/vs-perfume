@@ -202,7 +202,7 @@
 		"module": { "foreground": "#6176d1", "underline": true },
 		"namespace": { "foreground": "#6176d1", "underline": true },
 		"keyword": { "foreground": "#4f5a90", "bold": true },
-		"keyword.control": { "foreground": "#df1b6c", "bold": true, "italic": true },
+		"keyword.control": { "foreground": "var:primary-500", "bold": true, "italic": true },
 		"operator": { "foreground": "#4f5a90" },
 		"operator.assignment": { "foreground": "#ff4d96", "bold": true, "italic": true },
 		"number": { "foreground": "#c73a78", "bold": true },
@@ -213,7 +213,7 @@
 		"decorator": { "foreground": "#3f496f" },
 		"annotation": { "foreground": "#3f496f" },
 		"macro": { "foreground": "#6176d1" },
-		"label": { "foreground": "#df1b6c" },
+		"label": { "foreground": "var:primary-500" },
 		"type": { "foreground": "#cc67e3", "italic": true },
 		"selfParameter": { "foreground": "#4f5a90" }
 	},
@@ -245,7 +245,7 @@
 		{
 			"name": "Number",
 			"scope": ["constant.numeric"],
-			"settings": { "foreground": "#df1b6c" }
+			"settings": { "foreground": "var:primary-500" }
 		},
 		// Booleans & Null-like (bright pink for emphasis)
 		{
@@ -275,7 +275,7 @@
 		{
 			"name": "Operator Logical",
 			"scope": ["keyword.operator.logical"],
-			"settings": { "foreground": "#df1b6c" }
+			"settings": { "foreground": "var:primary-500" }
 		},
 		// Operators - Comparison, Arithmetic, Bitwise (dark blue)
 		{
@@ -299,13 +299,13 @@
 		{
 			"name": "Variable",
 			"scope": ["variable", "variable.other.readwrite", "variable.other.object"],
-			"settings": { "foreground": "#d1bbbe" }
+			"settings": { "foreground": "var:foreground-100 73%" }
 		},
 		// Properties (dim white)
 		{
 			"name": "Property",
 			"scope": ["variable.other.property", "meta.object-literal.key", "support.variable.property"],
-			"settings": { "foreground": "#f5eaecbb" }
+			"settings": { "foreground": "var:foreground-100 73%" }
 		},
 		// Classes (bold white)
 		{
@@ -371,7 +371,7 @@
 		{
 			"name": "Markdown - raw string",
 			"scope": ["markup.inline.raw.string"],
-			"settings": { "foreground": "#df1b6c" }
+			"settings": { "foreground": "var:primary-500" }
 		},
 		{
 			"name": "Markdown - link",
@@ -405,6 +405,12 @@
 			"name": "HTML - XML tags",
 			"scope": ["entity.name.tag", "meta.tag.html"],
 			"settings": { "foreground": "#ea80ac" }
+		},
+		// Bash
+		{
+			"name": "Bash - Shebang",
+			"scope": ["meta.shebang.shell", "punctuation.definition.comment.shebang.shell"],
+			"settings": {"foreground": "var:primary-600", "fontStyle": "italic underline" }
 		}
 	]
 }
