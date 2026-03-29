@@ -77,7 +77,6 @@
 .monaco-workbench .composite.title {
    background: linear-gradient(90deg, #2a2834aa, #2f2d3a55) !important;
    border-bottom: 1px solid var(--perfume-border) !important;
-   backdrop-filter: blur(var(--perfume-blur-sm)) !important;
 }
 
 /* Command palette */
@@ -106,6 +105,10 @@
    border-radius: var(--perfume-radius-sm) !important;
 }
 
+.monaco-resizable-hover:has(.monaco-hover) {
+   background: transparent !important;
+}
+
 .editor-widget.suggest-widget .monaco-list-row.focused {
    background: twotoneBackground() !important;
 }
@@ -131,6 +134,10 @@
 
    // FIXME: Since backdrop-filter doesn't work on overflow children a temp fix is to apply a solid bg for now
    background: var(--perfume-bg-overlay) !important;
+}
+
+.context-view.monaco-component.monaco-menu-container {
+   overflow: visible !important;
 }
 
 .menubar-menu-items-holder > * {
@@ -256,7 +263,6 @@
 /* Panel headers */
 .monaco-workbench .panel .title {
    background: linear-gradient(90deg, #2f2d3a80, #23212d44) !important;
-   backdrop-filter: blur(var(--perfume-blur-sm)) !important;
    border-bottom: 1px solid var(--perfume-border) !important;
 }
 
